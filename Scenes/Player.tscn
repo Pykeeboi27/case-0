@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://default_env.tres" type="Environment" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Flashlight.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Crosshair.png" type="Texture" id=4]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.5
+height = 1.5
+
+[node name="Player" type="KinematicBody"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
+script = ExtResource( 2 )
+moveSpeed = 10.0
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.25, 0 )
+shape = SubResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 0 )
+environment = ExtResource( 1 )
+current = true
+fov = 60.0
+
+[node name="Interaction" type="RayCast" parent="Camera"]
+enabled = true
+cast_to = Vector3( 0, 0, -5 )
+
+[node name="Hand" type="Position3D" parent="Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4 )
+
+[node name="TextureRect" type="TextureRect" parent="Camera/Hand"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -192.0
+margin_top = -108.0
+margin_right = 1728.0
+margin_bottom = 972.0
+rect_scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+
+[node name="Flashlight" parent="Camera" instance=ExtResource( 3 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.34764, -0.175, -0.436 )
