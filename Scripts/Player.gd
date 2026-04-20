@@ -1,6 +1,4 @@
-extends KinematicBody
-
-#physics
+extends KinematicBody #physics
 export var moveSpeed: float = 5.0
 export var jumpForce: float = 10.0
 export var gravity: float = 30.0
@@ -18,8 +16,22 @@ var mouseDelta: Vector2 = Vector2()
 var pickedObject
 var objectPullPower: float = 4.0
 
+# --- HEAD BOB ---
+export var bobFrequency: float = 12.0   # How fast the bob cycles
+export var bobAmplitude: float = 0.20  # How much the camera moves up/down
+var bobTime: float = 0.0
+var cameraDefaultY: float = 0.0
+# ----------------
+
 #player components
 onready var camera = get_node("Camera")
+onready var interaction = get_node("Camera/Interaction")
+onready var hand = get_node("Camera/Hand")
+
+func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	OS.window_fullscreen = true
+	cameraDefaultY = camera.translation.y  # store the camera's resting Y position
 
 func _input(event):
 	#mouse movement
@@ -33,15 +45,16 @@ func _process(delta):
 	camera.rotation_degrees.x = clamp(camera.rotation_degrees.x, minLookAngle, maxLookAngle)
 	#rotate player along y-axis
 	rotation_degrees -= Vector3(0, rad2deg(mouseDelta.x), 0)*lookSensitivity*delta
-	
 	#reset the mouse delta vector
 	mouseDelta = Vector2()
-	
+
 func _physics_process(delta):
 	#reset the x and z velocity
 	velocity.x = 0
 	velocity.z = 0
+
 	var input = Vector2()
+
 	#movement inputs
 	if Input.is_action_pressed("move_forward"):
 		input.y -= 1
@@ -51,56 +64,62 @@ func _physics_process(delta):
 		input.x -= 1
 	if Input.is_action_pressed("move_right"):
 		input.x += 1
+
 	#normalize the input so no faster movement diagonally
 	input = input.normalized()
-	
+
 	#get out forward and right directions
 	var forward = global_transform.basis.z
 	var right = global_transform.basis.x
-	
-	velocity.z = (forward*input.y + right*input.x).z *moveSpeed
-	velocity.x = (forward*input.y + right*input.x).x *moveSpeed
-	
+	velocity.z = (forward*input.y + right*input.x).z * moveSpeed
+	velocity.x = (forward*input.y + right*input.x).x * moveSpeed
+
 	#apply gravity
 	velocity.y -= gravity * delta
-	
+
 	#move the player
 	velocity = move_and_slide(velocity, Vector3.UP)
-	
-	#jump if the jump button is pressed and if our player is also standing on the floor
+
+	#jump
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = jumpForce
+
+	# --- HEAD BOB ---
+	var isMoving = input.length() > 0 and is_on_floor()
+	if isMoving:
+		bobTime += delta * bobFrequency
+		camera.translation.y = cameraDefaultY + sin(bobTime) * bobAmplitude
+	else:
+		# Smoothly reset the camera back to default Y when not moving
+		bobTime = 0.0
+		camera.translation.y = lerp(camera.translation.y, cameraDefaultY, delta * 10.0)
+	# ----------------
+
 	#picking up and dropping objects
 	if Input.is_action_just_pressed('pick_up'):
 		pickObjects()
 	if Input.is_action_just_pressed('drop'):
 		dropObjects()
+
 	#picking up objects from rayCast to postion3D
 	if pickedObject != null:
 		var a = pickedObject.global_transform.origin
 		var b = hand.global_transform.origin
 		pickedObject.set_linear_velocity((b-a)*objectPullPower)
-	
+
 func window_activity():
 	if Input.is_action_just_pressed("ui_cancel"):
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-			
-func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	OS.window_fullscreen = true
-	
-onready var interaction = get_node("Camera/Interaction")
-onready var hand = get_node("Camera/Hand")
 
 func pickObjects():
 	var collider = interaction.get_collider()
 	if collider != null and collider is RigidBody:
 		print("Test if working")
 		pickedObject = collider
-	
+
 func dropObjects():
 	if pickedObject != null:
 		print("Dropping?")
