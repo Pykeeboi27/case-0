@@ -1,9 +1,16 @@
 extends Spatial
 
 var flashlight_on := false
+var is_equipped = false
 
+onready var batteryicon = $Battery
+
+func _ready():
+	if not is_equipped:
+		batteryicon.hide()
+		
 func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("flashlight"):
+	if Input.is_action_just_pressed("flashlight") and is_equipped:
 		if $Battery.value > 0 or flashlight_on:
 			flashlight_on = !flashlight_on
 	

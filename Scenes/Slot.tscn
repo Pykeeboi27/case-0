@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="ShortCut" id=7]
+
+[sub_resource type="StyleBoxFlat" id=8]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.227451, 0.223529, 0.223529, 1 )
+
+[node name="Slot" type="TextureButton"]
+margin_left = 108.0
+margin_right = 172.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+shortcut = SubResource( 7 )
+expand = true
+stretch_mode = 5
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color( 0.364706, 0.356863, 0.356863, 1 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 8 )
