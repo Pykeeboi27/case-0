@@ -15,6 +15,7 @@ var mouseDelta: Vector2 = Vector2()
 #Physics and Pick up Objects
 var pickedObject
 var objectPullPower: float = 4.0
+var current_item = null
 
 # --- HEAD BOB ---
 export var bobFrequency: float = 12.0   # How fast the bob cycles
@@ -27,16 +28,29 @@ var cameraDefaultY: float = 0.0
 onready var camera = get_node("Camera")
 onready var interaction = get_node("Camera/Interaction")
 onready var hand = get_node("Camera/Hand")
+onready var labeltext = $CanvasLayer/InteractContainer/InteractLabel
+onready var itemhand = get_node("Camera/ItemHand")
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	OS.window_fullscreen = true
 	cameraDefaultY = camera.translation.y  # store the camera's resting Y position
+	Inventory.connect("slot_selected", self, "_on_slot_selected")
 
 func _input(event):
 	#mouse movement
 	if event is InputEventMouseMotion:
 		mouseDelta = event.relative
+	
+	if event.is_action_pressed("slot_1"):
+		Inventory.select_slot(0)
+	elif event.is_action_pressed("slot_2"):
+		Inventory.select_slot(1)
+	elif event.is_action_pressed("slot_3"):
+		Inventory.select_slot(2)
+	elif event.is_action_pressed("slot_4"):
+		Inventory.select_slot(3)
+	
 
 func _process(delta):
 	#rotate camera along x-axis
@@ -106,7 +120,17 @@ func _physics_process(delta):
 		var a = pickedObject.global_transform.origin
 		var b = hand.global_transform.origin
 		pickedObject.set_linear_velocity((b-a)*objectPullPower)
-
+	
+	labeltext.hide()
+	
+	if interaction.is_colliding():
+		var target = interaction.get_collider()
+		if target != null and target.has_method("interact"):
+			labeltext.show()
+				
+			if Input.is_action_just_pressed("interact"):
+				target.interact(self)
+			
 func window_activity():
 	if Input.is_action_just_pressed("ui_cancel"):
 		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
@@ -124,3 +148,18 @@ func dropObjects():
 	if pickedObject != null:
 		print("Dropping?")
 		pickedObject = null
+		
+func pickup_item(item):
+	return Inventory.add_item(item)
+
+func _on_slot_selected(index):
+	var item = Inventory.hotbar[index]
+
+	if current_item:
+		current_item.queue_free()
+		current_item = null
+
+	if item and item.mesh_scene:
+		current_item = item.mesh_scene.instance()
+		current_item.is_equipped = true
+		itemhand.add_child(current_item)
