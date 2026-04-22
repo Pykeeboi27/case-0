@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://3g5goho285rs"
+path="res://.godot/imported/Roof_Straight_Side.obj-f60aa85201b390050aab4101e1b48dcd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Roof_Straight_Side.obj-f60aa85201b390050aab4101e1b48dcd.mesh"]
+
+source_file="res://Scenes/lowpolymansion/Modular Village/Roof_Straight_Side.obj"
+dest_files=["res://.godot/imported/Roof_Straight_Side.obj-f60aa85201b390050aab4101e1b48dcd.mesh", "res://.godot/imported/Roof_Straight_Side.obj-f60aa85201b390050aab4101e1b48dcd.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

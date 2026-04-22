@@ -6,10 +6,10 @@ func _ready():
 	slots = get_children()
 
 	for i in range(slots.size()):
-		slots[i].connect("pressed", self, "_on_slot_pressed", [i])
+		slots[i].connect("pressed", Callable(self, "_on_slot_pressed").bind(i))
 
-	Inventory.connect("inventory_changed", self, "_update_hotbar")
-	Inventory.connect("slot_selected", self, "_highlight_slot")
+	Inventory.connect("inventory_changed", Callable(self, "_update_hotbar"))
+	Inventory.connect("slot_selected", Callable(self, "_highlight_slot"))
 
 	_update_hotbar()
 	_highlight_slot(Inventory.selected_slot)

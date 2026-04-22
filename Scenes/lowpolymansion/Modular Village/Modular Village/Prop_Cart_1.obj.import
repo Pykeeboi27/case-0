@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d3vigcl8lf2ls"
+path="res://.godot/imported/Prop_Cart_1.obj-57aa818a89cdbe09bb85b59b51d3b356.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Prop_Cart_1.obj-57aa818a89cdbe09bb85b59b51d3b356.mesh"]
+
+source_file="res://Scenes/lowpolymansion/Modular Village/Modular Village/Prop_Cart_1.obj"
+dest_files=["res://.godot/imported/Prop_Cart_1.obj-57aa818a89cdbe09bb85b59b51d3b356.mesh", "res://.godot/imported/Prop_Cart_1.obj-57aa818a89cdbe09bb85b59b51d3b356.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -3,11 +3,11 @@ extends Node
 signal inventory_changed
 signal slot_selected
 
-export(int) var HOTBAR_SIZE = 4
-export(Array, Resource) var default_items 
+@export var HOTBAR_SIZE: int = 4
+@export var default_items: Array[Resource] = []
 
-var hotbar = []
-var selected_slot 
+var hotbar: Array = []
+var selected_slot: int
 
 func _ready():
 	hotbar.resize(HOTBAR_SIZE)

@@ -1,238 +1,237 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene format=3 uid="uid://cfjy7jle028i0"]
 
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scripts/Test Platform.gd" type="Script" id=2]
-[ext_resource path="res://Scenes/CanvasLayer.gd" type="Script" id=3]
-[ext_resource path="res://Scenes/ItemPickup.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Slot.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Hotbar.gd" type="Script" id=6]
-[ext_resource path="res://Assets/items/flashlight.tres" type="Resource" id=7]
+[ext_resource type="PackedScene" uid="uid://dt0l6ncdi22vo" path="res://Scenes/Player.tscn" id="1"]
+[ext_resource type="Script" uid="uid://s8vo4rs2dwyl" path="res://Scripts/Test Platform.gd" id="2"]
+[ext_resource type="Script" uid="uid://cry8kpmwix7po" path="res://Scenes/CanvasLayer.gd" id="3"]
+[ext_resource type="PackedScene" path="res://Scenes/ItemPickup.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Scenes/Slot.tscn" id="5"]
+[ext_resource type="Script" uid="uid://cll2otth65qpg" path="res://Scenes/Hotbar.gd" id="6"]
+[ext_resource type="Resource" path="res://Assets/items/flashlight.tres" id="7"]
+[ext_resource type="PackedScene" uid="uid://dcehrqkc7trce" path="res://Scenes/lowpolymansion/mansion.tscn" id="8_j0geh"]
 
-[sub_resource type="SpatialMaterial" id=1]
-albedo_color = Color( 0.286275, 0.639216, 0.239216, 1 )
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sag1g"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 
-[sub_resource type="SpatialMaterial" id=2]
-albedo_color = Color( 0.47451, 0.294118, 0.294118, 1 )
+[sub_resource type="Sky" id="Sky_j0geh"]
+sky_material = SubResource("ProceduralSkyMaterial_sag1g")
 
-[sub_resource type="SpatialMaterial" id=3]
-albedo_color = Color( 0.054902, 0.482353, 0.172549, 1 )
+[sub_resource type="Environment" id="Environment_sbe5v"]
+background_mode = 2
+sky = SubResource("Sky_j0geh")
+tonemap_mode = 2
+glow_enabled = true
+volumetric_fog_enabled = true
 
-[node name="Land" type="Spatial"]
-script = ExtResource( 2 )
+[sub_resource type="StandardMaterial3D" id="1"]
+albedo_color = Color(0.286275, 0.639216, 0.239216, 1)
 
-[node name="Environment" type="CSGCombiner" parent="."]
+[sub_resource type="StandardMaterial3D" id="2"]
+albedo_color = Color(0.47451, 0.294118, 0.294118, 1)
+
+[sub_resource type="StandardMaterial3D" id="3"]
+albedo_color = Color(0.054902, 0.482353, 0.172549, 1)
+
+[node name="Land" type="Node3D" unique_id=1470769102]
+script = ExtResource("2")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1707094419]
+environment = SubResource("Environment_sbe5v")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1756180024]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Environment" type="CSGCombiner3D" parent="." unique_id=1523694872]
 use_collision = true
 
-[node name="CSGBox" type="CSGBox" parent="Environment"]
-width = 100.0
-depth = 100.0
-material = SubResource( 1 )
+[node name="CSGBox3D" type="CSGBox3D" parent="Environment" unique_id=654731623]
+size = Vector3(100, 1, 100)
+material = SubResource("1")
 
-[node name="CSGCylinder" type="CSGCylinder" parent="Environment"]
-transform = Transform( 1, 0, 0, 0, 5.57143, 0, 0, 0, 1, -36, 3.22153, -37 )
-material = SubResource( 2 )
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Environment" unique_id=398489104]
+transform = Transform3D(1, 0, 0, 0, 5.57143, 0, 0, 0, 1, -36, 3.22153, -37)
+material = SubResource("2")
 
-[node name="CSGSphere" type="CSGSphere" parent="Environment/CSGCylinder"]
-transform = Transform( 3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0 )
-material = SubResource( 3 )
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Environment/CSGCylinder3D" unique_id=1906098464]
+transform = Transform3D(3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0)
+material = SubResource("3")
 
-[node name="CSGCylinder2" type="CSGCylinder" parent="Environment"]
-transform = Transform( 1, 0, 0, 0, 5.57143, 0, 0, 0, 1, -12, 3.22153, -23 )
-material = SubResource( 2 )
+[node name="CSGCylinder4" type="CSGCylinder3D" parent="Environment" unique_id=649003521]
+transform = Transform3D(1, 0, 0, 0, 5.57143, 0, 0, 0, 1, 7, 3.22153, 6)
+material = SubResource("2")
 
-[node name="CSGSphere" type="CSGSphere" parent="Environment/CSGCylinder2"]
-transform = Transform( 3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0 )
-material = SubResource( 3 )
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Environment/CSGCylinder4" unique_id=816000958]
+transform = Transform3D(3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0)
+material = SubResource("3")
 
-[node name="CSGCylinder3" type="CSGCylinder" parent="Environment"]
-transform = Transform( 1, 0, 0, 0, 5.57143, 0, 0, 0, 1, 7, 3.22153, -36 )
-material = SubResource( 2 )
+[node name="CSGCylinder5" type="CSGCylinder3D" parent="Environment" unique_id=1252683126]
+transform = Transform3D(1, 0, 0, 0, 5.57143, 0, 0, 0, 1, -30, 3.22153, -5)
+material = SubResource("2")
 
-[node name="CSGSphere" type="CSGSphere" parent="Environment/CSGCylinder3"]
-transform = Transform( 3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0 )
-material = SubResource( 3 )
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Environment/CSGCylinder5" unique_id=805400531]
+transform = Transform3D(3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0)
+material = SubResource("3")
 
-[node name="CSGCylinder4" type="CSGCylinder" parent="Environment"]
-transform = Transform( 1, 0, 0, 0, 5.57143, 0, 0, 0, 1, 7, 3.22153, 6 )
-material = SubResource( 2 )
+[node name="CSGCylinder6" type="CSGCylinder3D" parent="Environment" unique_id=505978677]
+transform = Transform3D(1, 0, 0, 0, 5.57143, 0, 0, 0, 1, -17, 3.22153, 24)
+material = SubResource("2")
 
-[node name="CSGSphere" type="CSGSphere" parent="Environment/CSGCylinder4"]
-transform = Transform( 3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0 )
-material = SubResource( 3 )
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Environment/CSGCylinder6" unique_id=2140883065]
+transform = Transform3D(3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0)
+material = SubResource("3")
 
-[node name="CSGCylinder5" type="CSGCylinder" parent="Environment"]
-transform = Transform( 1, 0, 0, 0, 5.57143, 0, 0, 0, 1, -30, 3.22153, -5 )
-material = SubResource( 2 )
+[node name="CSGCylinder7" type="CSGCylinder3D" parent="Environment" unique_id=121698787]
+transform = Transform3D(1, 0, 0, 0, 5.57143, 0, 0, 0, 1, 34, 3.22153, -21)
+material = SubResource("2")
 
-[node name="CSGSphere" type="CSGSphere" parent="Environment/CSGCylinder5"]
-transform = Transform( 3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0 )
-material = SubResource( 3 )
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Environment/CSGCylinder7" unique_id=513995198]
+transform = Transform3D(3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0)
+material = SubResource("3")
 
-[node name="CSGCylinder6" type="CSGCylinder" parent="Environment"]
-transform = Transform( 1, 0, 0, 0, 5.57143, 0, 0, 0, 1, -17, 3.22153, 24 )
-material = SubResource( 2 )
+[node name="CSGCylinder8" type="CSGCylinder3D" parent="Environment" unique_id=1545360180]
+transform = Transform3D(1, 0, 0, 0, 5.57143, 0, 0, 0, 1, 29, 3.22153, 25)
+material = SubResource("2")
 
-[node name="CSGSphere" type="CSGSphere" parent="Environment/CSGCylinder6"]
-transform = Transform( 3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0 )
-material = SubResource( 3 )
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Environment/CSGCylinder8" unique_id=658944176]
+transform = Transform3D(3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0)
+material = SubResource("3")
 
-[node name="CSGCylinder7" type="CSGCylinder" parent="Environment"]
-transform = Transform( 1, 0, 0, 0, 5.57143, 0, 0, 0, 1, 34, 3.22153, -21 )
-material = SubResource( 2 )
+[node name="CSGCylinder9" type="CSGCylinder3D" parent="Environment" unique_id=1635409608]
+transform = Transform3D(1, 0, 0, 0, 5.57143, 0, 0, 0, 1, 8, 3.22153, 38)
+material = SubResource("2")
 
-[node name="CSGSphere" type="CSGSphere" parent="Environment/CSGCylinder7"]
-transform = Transform( 3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0 )
-material = SubResource( 3 )
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Environment/CSGCylinder9" unique_id=279254999]
+transform = Transform3D(3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0)
+material = SubResource("3")
 
-[node name="CSGCylinder8" type="CSGCylinder" parent="Environment"]
-transform = Transform( 1, 0, 0, 0, 5.57143, 0, 0, 0, 1, 29, 3.22153, 25 )
-material = SubResource( 2 )
+[node name="CSGCylinder10" type="CSGCylinder3D" parent="Environment" unique_id=27382062]
+transform = Transform3D(1, 0, 0, 0, 5.57143, 0, 0, 0, 1, 31, 3.22153, 2)
+material = SubResource("2")
 
-[node name="CSGSphere" type="CSGSphere" parent="Environment/CSGCylinder8"]
-transform = Transform( 3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0 )
-material = SubResource( 3 )
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Environment/CSGCylinder10" unique_id=1717982453]
+transform = Transform3D(3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0)
+material = SubResource("3")
 
-[node name="CSGCylinder9" type="CSGCylinder" parent="Environment"]
-transform = Transform( 1, 0, 0, 0, 5.57143, 0, 0, 0, 1, 8, 3.22153, 38 )
-material = SubResource( 2 )
+[node name="CSGCylinder11" type="CSGCylinder3D" parent="Environment" unique_id=1009626097]
+transform = Transform3D(1, 0, 0, 0, 5.57143, 0, 0, 0, 1, 26, 3.22153, -39)
+material = SubResource("2")
 
-[node name="CSGSphere" type="CSGSphere" parent="Environment/CSGCylinder9"]
-transform = Transform( 3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0 )
-material = SubResource( 3 )
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Environment/CSGCylinder11" unique_id=1702289423]
+transform = Transform3D(3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0)
+material = SubResource("3")
 
-[node name="CSGCylinder10" type="CSGCylinder" parent="Environment"]
-transform = Transform( 1, 0, 0, 0, 5.57143, 0, 0, 0, 1, 31, 3.22153, 2 )
-material = SubResource( 2 )
+[node name="CSGCylinder13" type="CSGCylinder3D" parent="Environment" unique_id=443144814]
+transform = Transform3D(1, 0, 0, 0, 5.57143, 0, 0, 0, 1, -38, 3.22153, 13)
+material = SubResource("2")
 
-[node name="CSGSphere" type="CSGSphere" parent="Environment/CSGCylinder10"]
-transform = Transform( 3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0 )
-material = SubResource( 3 )
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Environment/CSGCylinder13" unique_id=1807718064]
+transform = Transform3D(3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0)
+material = SubResource("3")
 
-[node name="CSGCylinder11" type="CSGCylinder" parent="Environment"]
-transform = Transform( 1, 0, 0, 0, 5.57143, 0, 0, 0, 1, 26, 3.22153, -39 )
-material = SubResource( 2 )
+[node name="CSGCylinder14" type="CSGCylinder3D" parent="Environment" unique_id=2133450683]
+transform = Transform3D(1, 0, 0, 0, 5.57143, 0, 0, 0, 1, -12, 3.22153, 3)
+material = SubResource("2")
 
-[node name="CSGSphere" type="CSGSphere" parent="Environment/CSGCylinder11"]
-transform = Transform( 3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0 )
-material = SubResource( 3 )
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Environment/CSGCylinder14" unique_id=1111041665]
+transform = Transform3D(3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0)
+material = SubResource("3")
 
-[node name="CSGCylinder12" type="CSGCylinder" parent="Environment"]
-transform = Transform( 1, 0, 0, 0, 5.57143, 0, 0, 0, 1, 11, 3.22153, -18 )
-material = SubResource( 2 )
+[node name="CSGCylinder15" type="CSGCylinder3D" parent="Environment" unique_id=274790561]
+transform = Transform3D(1, 0, 0, 0, 5.57143, 0, 0, 0, 1, -36, 3.22153, 34)
+material = SubResource("2")
 
-[node name="CSGSphere" type="CSGSphere" parent="Environment/CSGCylinder12"]
-transform = Transform( 3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0 )
-material = SubResource( 3 )
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Environment/CSGCylinder15" unique_id=2030302402]
+transform = Transform3D(3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0)
+material = SubResource("3")
 
-[node name="CSGCylinder13" type="CSGCylinder" parent="Environment"]
-transform = Transform( 1, 0, 0, 0, 5.57143, 0, 0, 0, 1, -38, 3.22153, 13 )
-material = SubResource( 2 )
+[node name="CSGCylinder16" type="CSGCylinder3D" parent="Environment" unique_id=1246016722]
+transform = Transform3D(1, 0, 0, 0, 5.57143, 0, 0, 0, 1, -38, 3.22153, -19)
+material = SubResource("2")
 
-[node name="CSGSphere" type="CSGSphere" parent="Environment/CSGCylinder13"]
-transform = Transform( 3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0 )
-material = SubResource( 3 )
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Environment/CSGCylinder16" unique_id=1051579529]
+transform = Transform3D(3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0)
+material = SubResource("3")
 
-[node name="CSGCylinder14" type="CSGCylinder" parent="Environment"]
-transform = Transform( 1, 0, 0, 0, 5.57143, 0, 0, 0, 1, -12, 3.22153, 3 )
-material = SubResource( 2 )
+[node name="Player" parent="." unique_id=1948949356 instance=ExtResource("1")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2, 0)
 
-[node name="CSGSphere" type="CSGSphere" parent="Environment/CSGCylinder14"]
-transform = Transform( 3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0 )
-material = SubResource( 3 )
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2121256610]
+script = ExtResource("3")
 
-[node name="CSGCylinder15" type="CSGCylinder" parent="Environment"]
-transform = Transform( 1, 0, 0, 0, 5.57143, 0, 0, 0, 1, -36, 3.22153, 34 )
-material = SubResource( 2 )
-
-[node name="CSGSphere" type="CSGSphere" parent="Environment/CSGCylinder15"]
-transform = Transform( 3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0 )
-material = SubResource( 3 )
-
-[node name="CSGCylinder16" type="CSGCylinder" parent="Environment"]
-transform = Transform( 1, 0, 0, 0, 5.57143, 0, 0, 0, 1, -38, 3.22153, -19 )
-material = SubResource( 2 )
-
-[node name="CSGSphere" type="CSGSphere" parent="Environment/CSGCylinder16"]
-transform = Transform( 3.8, 0, 0, 0, 0.675825, 0, 0, 0, 3.8, 0, 0.871615, 0 )
-material = SubResource( 3 )
-
-[node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2, 0 )
-
-[node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.0132292, 0.999913, 0, -0.999913, 0.0132292, 0, 83.2741, 0.669083 )
-light_energy = 0.2
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-script = ExtResource( 3 )
-
-[node name="Panel" type="Panel" parent="CanvasLayer"]
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1070587054]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -176.5
-margin_top = -55.5
-margin_right = 176.5
-margin_bottom = 55.5
+offset_left = -176.5
+offset_top = -55.5
+offset_right = 176.5
+offset_bottom = 55.5
 
-[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+[node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=226377030]
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -163.5
-margin_top = -3.5
-margin_right = 164.5
-margin_bottom = 52.5
+offset_left = -163.5
+offset_top = -3.5
+offset_right = 164.5
+offset_bottom = 52.5
 text = "Objective: Explore the environment."
-align = 1
+horizontal_alignment = 1
 
-[node name="Control" type="Control" parent="CanvasLayer"]
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1700298263]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_bottom = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Hotbar" type="HBoxContainer" parent="CanvasLayer/Control"]
+[node name="Hotbar" type="HBoxContainer" parent="CanvasLayer/Control" unique_id=330618204]
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -140.0
-margin_top = -64.0
-margin_right = 140.0
-custom_constants/separation = 3
+offset_left = -140.0
+offset_top = -64.0
+offset_right = 140.0
+theme_override_constants/separation = 3
 alignment = 1
-script = ExtResource( 6 )
+script = ExtResource("6")
 
-[node name="Slot" parent="CanvasLayer/Control/Hotbar" instance=ExtResource( 5 )]
-margin_left = 7.0
-margin_right = 71.0
+[node name="Slot" parent="CanvasLayer/Control/Hotbar" unique_id=1892835880 instance=ExtResource("5")]
+layout_mode = 2
 
-[node name="Slot2" parent="CanvasLayer/Control/Hotbar" instance=ExtResource( 5 )]
-margin_left = 74.0
-margin_right = 138.0
+[node name="Slot2" parent="CanvasLayer/Control/Hotbar" unique_id=211817189 instance=ExtResource("5")]
+layout_mode = 2
 
-[node name="Slot3" parent="CanvasLayer/Control/Hotbar" instance=ExtResource( 5 )]
-margin_left = 141.0
-margin_right = 205.0
+[node name="Slot3" parent="CanvasLayer/Control/Hotbar" unique_id=2002225718 instance=ExtResource("5")]
+layout_mode = 2
 
-[node name="Slot4" parent="CanvasLayer/Control/Hotbar" instance=ExtResource( 5 )]
-margin_left = 208.0
-margin_right = 272.0
+[node name="Slot4" parent="CanvasLayer/Control/Hotbar" unique_id=102324360 instance=ExtResource("5")]
+layout_mode = 2
 
-[node name="ItemPickup" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.11299, 1.70088, 0.629415 )
-item_data = ExtResource( 7 )
+[node name="ItemPickup" parent="." unique_id=1109312701 instance=ExtResource("4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.11299, 0.67555094, 0.629415)
+item_data = ExtResource("7")
 
-[node name="ItemPickup2" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.11299, 1.70088, 2.09559 )
-item_data = ExtResource( 7 )
+[node name="ItemPickup2" parent="." unique_id=668058311 instance=ExtResource("4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.11299, 0.67555094, 2.09559)
+item_data = ExtResource("7")
 
-[node name="ItemPickup3" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.14663, 1.70088, 0.629415 )
-item_data = ExtResource( 7 )
+[node name="ItemPickup3" parent="." unique_id=118496988 instance=ExtResource("4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.14663, 0.67555094, 0.629415)
+item_data = ExtResource("7")
 
-[node name="ItemPickup4" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.17746, 1.70088, 0.629415 )
-item_data = ExtResource( 7 )
+[node name="ItemPickup4" parent="." unique_id=1863885228 instance=ExtResource("4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.17746, 0.67555094, 0.629415)
+item_data = ExtResource("7")
+
+[node name="Mansion" parent="." unique_id=1208093814 instance=ExtResource("8_j0geh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0829825, 0.4352703, -53.98785)

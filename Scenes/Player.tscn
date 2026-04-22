@@ -1,66 +1,62 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene format=3 uid="uid://dt0l6ncdi22vo"]
 
-[ext_resource path="res://default_env.tres" type="Environment" id=1]
-[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
-[ext_resource path="res://Crosshair.png" type="Texture" id=4]
+[ext_resource type="Script" uid="uid://curh6yy68vas" path="res://Scripts/Player.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://df7qqh2d2nues" path="res://Crosshair.png" id="4"]
 
-[sub_resource type="CapsuleShape" id=1]
-radius = 0.5
-height = 1.5
+[sub_resource type="CapsuleShape3D" id="1"]
+height = 2.760376
 
-[node name="Player" type="KinematicBody"]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
-script = ExtResource( 2 )
+[node name="Player" type="CharacterBody3D" unique_id=2134098255]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+script = ExtResource("2")
 moveSpeed = 10.0
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.25, 0 )
-shape = SubResource( 1 )
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=624035815]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.9999899, -0.0044506635, 0, 0.0044506635, 0.9999899, 0, 1.3884867, 0.0006163668)
+shape = SubResource("1")
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 0 )
-environment = ExtResource( 1 )
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2112133379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 0)
 current = true
 fov = 60.0
 
-[node name="Interaction" type="RayCast" parent="Camera"]
-transform = Transform( 1.00516, 0, 0, 0, 1.00516, 0, 0, 0, 1.58222, 0, 0, 0 )
-enabled = true
-cast_to = Vector3( 0, 0, -5 )
+[node name="Interaction" type="RayCast3D" parent="Camera3D" unique_id=1565863452]
+transform = Transform3D(1.00516, 0, 0, 0, 1.00516, 0, 0, 0, 1.58222, 0, 0, 0)
+target_position = Vector3(0, 0, -5)
 collide_with_areas = true
 
-[node name="Hand" type="Position3D" parent="Camera"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4 )
+[node name="Hand" type="Marker3D" parent="Camera3D" unique_id=1337332046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
 
-[node name="TextureRect" type="TextureRect" parent="Camera/Hand"]
+[node name="TextureRect" type="TextureRect" parent="Camera3D/Hand" unique_id=227572282]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -192.0
-margin_top = -108.0
-margin_right = 1728.0
-margin_bottom = 972.0
-rect_scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 4 )
+offset_left = -192.0
+offset_top = -108.0
+offset_right = 1728.0
+offset_bottom = 972.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4")
 
-[node name="ItemHand" type="Spatial" parent="Camera"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.348, -0.175, -0.436 )
+[node name="ItemHand" type="Node3D" parent="Camera3D" unique_id=418812473]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.348, -0.175, -0.436)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=77595745]
 
-[node name="InteractContainer" type="HBoxContainer" parent="CanvasLayer"]
+[node name="InteractContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=554384333]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -65.5
-margin_top = -20.0
-margin_right = 65.5
-margin_bottom = 20.0
+offset_left = -65.5
+offset_top = -20.0
+offset_right = 65.5
+offset_bottom = 20.0
 
-[node name="InteractLabel" type="Label" parent="CanvasLayer/InteractContainer"]
-margin_top = 13.0
-margin_right = 131.0
-margin_bottom = 27.0
+[node name="InteractLabel" type="Label" parent="CanvasLayer/InteractContainer" unique_id=651488417]
+layout_mode = 2
 text = "Press \"E\" To Interact"

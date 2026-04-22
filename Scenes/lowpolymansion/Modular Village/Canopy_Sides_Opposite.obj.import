@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://fja6p8qi6r3h"
+path="res://.godot/imported/Canopy_Sides_Opposite.obj-c74c22ede99c5e77cacf8d7e486074fc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Canopy_Sides_Opposite.obj-c74c22ede99c5e77cacf8d7e486074fc.mesh"]
+
+source_file="res://Scenes/lowpolymansion/Modular Village/Canopy_Sides_Opposite.obj"
+dest_files=["res://.godot/imported/Canopy_Sides_Opposite.obj-c74c22ede99c5e77cacf8d7e486074fc.mesh", "res://.godot/imported/Canopy_Sides_Opposite.obj-c74c22ede99c5e77cacf8d7e486074fc.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

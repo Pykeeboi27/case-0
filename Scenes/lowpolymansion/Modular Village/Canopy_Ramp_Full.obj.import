@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bcv0368ll2d5s"
+path="res://.godot/imported/Canopy_Ramp_Full.obj-cb998a690bd3e3c97fddf590c393113d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Canopy_Ramp_Full.obj-cb998a690bd3e3c97fddf590c393113d.mesh"]
+
+source_file="res://Scenes/lowpolymansion/Modular Village/Canopy_Ramp_Full.obj"
+dest_files=["res://.godot/imported/Canopy_Ramp_Full.obj-cb998a690bd3e3c97fddf590c393113d.mesh", "res://.godot/imported/Canopy_Ramp_Full.obj-cb998a690bd3e3c97fddf590c393113d.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

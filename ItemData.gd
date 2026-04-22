@@ -1,8 +1,8 @@
 extends Resource
 class_name ItemData
 
-export(String) var item_name 
-export(Texture) var icon 
-export(PackedScene) var mesh_scene
-export(String) var item_type
-export(String) var target_use
+@export var item_name: String 
+@export var icon: Texture2D 
+@export var mesh_scene: PackedScene
+@export var item_type: String
+@export var target_use: String

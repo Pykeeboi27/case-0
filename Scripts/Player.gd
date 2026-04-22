@@ -1,7 +1,7 @@
-extends KinematicBody #physics
-export var moveSpeed: float = 5.0
-export var jumpForce: float = 10.0
-export var gravity: float = 30.0
+extends CharacterBody3D #physics
+@export var moveSpeed: float = 5.0
+@export var jumpForce: float = 10.0
+@export var gravity: float = 30.0
 
 #camera look
 var minLookAngle: float = -90.0
@@ -9,7 +9,6 @@ var maxLookAngle: float = 90.0
 var lookSensitivity: float = 0.2
 
 #vectors
-var velocity: Vector3 = Vector3()
 var mouseDelta: Vector2 = Vector2()
 
 #Physics and Pick up Objects
@@ -18,24 +17,29 @@ var objectPullPower: float = 4.0
 var current_item = null
 
 # --- HEAD BOB ---
-export var bobFrequency: float = 12.0   # How fast the bob cycles
-export var bobAmplitude: float = 0.20  # How much the camera moves up/down
+@export var bobFrequency: float = 20.0
+@export var bobAmplitudeY: float = 0.12   # up/down
+@export var bobAmplitudeX: float = 0.08   # left/right
+
 var bobTime: float = 0.0
-var cameraDefaultY: float = 0.0
+var cameraDefaultPosition: Vector3
 # ----------------
 
 #player components
-onready var camera = get_node("Camera")
-onready var interaction = get_node("Camera/Interaction")
-onready var hand = get_node("Camera/Hand")
-onready var labeltext = $CanvasLayer/InteractContainer/InteractLabel
-onready var itemhand = get_node("Camera/ItemHand")
+@onready var camera = get_node("Camera3D")
+@onready var interaction = get_node("Camera3D/Interaction")
+@onready var hand = get_node("Camera3D/Hand")
+@onready var labeltext = $CanvasLayer/InteractContainer/InteractLabel
+@onready var itemhand = get_node("Camera3D/ItemHand")
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	OS.window_fullscreen = true
-	cameraDefaultY = camera.translation.y  # store the camera's resting Y position
-	Inventory.connect("slot_selected", self, "_on_slot_selected")
+	
+	# Set fullscreen (Godot 4 way)
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+	
+	cameraDefaultPosition = camera.position
+	Inventory.connect("slot_selected", Callable(self, "_on_slot_selected"))
 
 func _input(event):
 	#mouse movement
@@ -54,11 +58,11 @@ func _input(event):
 
 func _process(delta):
 	#rotate camera along x-axis
-	camera.rotation_degrees -= Vector3(rad2deg(mouseDelta.y),0,0)*lookSensitivity*delta
+	camera.rotation_degrees -= Vector3(rad_to_deg(mouseDelta.y),0,0)*lookSensitivity*delta
 	#clamp the vertical camera rotation
 	camera.rotation_degrees.x = clamp(camera.rotation_degrees.x, minLookAngle, maxLookAngle)
 	#rotate player along y-axis
-	rotation_degrees -= Vector3(0, rad2deg(mouseDelta.x), 0)*lookSensitivity*delta
+	rotation_degrees -= Vector3(0, rad_to_deg(mouseDelta.x), 0)*lookSensitivity*delta
 	#reset the mouse delta vector
 	mouseDelta = Vector2()
 
@@ -92,7 +96,7 @@ func _physics_process(delta):
 	velocity.y -= gravity * delta
 
 	#move the player
-	velocity = move_and_slide(velocity, Vector3.UP)
+	move_and_slide()
 
 	#jump
 	if Input.is_action_pressed("jump") and is_on_floor():
@@ -100,13 +104,18 @@ func _physics_process(delta):
 
 	# --- HEAD BOB ---
 	var isMoving = input.length() > 0 and is_on_floor()
+
 	if isMoving:
 		bobTime += delta * bobFrequency
-		camera.translation.y = cameraDefaultY + sin(bobTime) * bobAmplitude
+		
+		var bobY = sin(bobTime) * bobAmplitudeY
+		var bobX = cos(bobTime * 0.5) * bobAmplitudeX  # slower sway for realism
+		
+		camera.position.x = cameraDefaultPosition.x + bobX
+		camera.position.y = cameraDefaultPosition.y + bobY
 	else:
-		# Smoothly reset the camera back to default Y when not moving
 		bobTime = 0.0
-		camera.translation.y = lerp(camera.translation.y, cameraDefaultY, delta * 10.0)
+		camera.position = camera.position.lerp(cameraDefaultPosition, delta * 8.0)
 	# ----------------
 
 	#picking up and dropping objects
@@ -140,7 +149,7 @@ func window_activity():
 
 func pickObjects():
 	var collider = interaction.get_collider()
-	if collider != null and collider is RigidBody:
+	if collider != null and collider is RigidBody3D:
 		print("Test if working")
 		pickedObject = collider
 
@@ -160,6 +169,6 @@ func _on_slot_selected(index):
 		current_item = null
 
 	if item and item.mesh_scene:
-		current_item = item.mesh_scene.instance()
+		current_item = item.mesh_scene.instantiate()
 		current_item.is_equipped = true
 		itemhand.add_child(current_item)
