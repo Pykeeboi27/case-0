@@ -1,25 +1,23 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene format=3 uid="uid://bvc0vm8lhfn10"]
 
-[ext_resource path="res://ItemTextures/painted_metal_shutter_4k.blend/textures/painted_metal_shutter_diff_4k.jpg" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://dp434cw3l8i5k" path="res://ItemTextures/painted_metal_shutter_4k.blend/textures/painted_metal_shutter_disp_4k.png" id="1_kbu8c"]
 
-[sub_resource type="BoxMesh" id=1]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dc3cn"]
+albedo_color = Color(0.3862508, 0.38625085, 0.38625085, 1)
+albedo_texture = ExtResource("1_kbu8c")
 
-[sub_resource type="StandardMaterial3D" id=2]
-albedo_color = Color( 0.486275, 0.466667, 0.466667, 1 )
-albedo_texture = ExtResource( 1 )
+[sub_resource type="BoxMesh" id="1"]
 
-[sub_resource type="ConcavePolygonShape3D" id=3]
-data = PackedVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+[sub_resource type="BoxShape3D" id="BoxShape3D_tj0yo"]
 
-[node name="Shelf" type="Node3D"]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.160369, 0 )
+[node name="Shelf" type="Node3D" unique_id=513662214]
 
-[node name="Shelf" type="MeshInstance3D" parent="."]
-transform = Transform3D( 1.12356, 0, 0, 0, 0.0412767, 0, 0, 0, 0.28449, 0, 0, 0 )
-mesh = SubResource( 1 )
-material/0 = SubResource( 2 )
+[node name="Shelf" type="MeshInstance3D" parent="." unique_id=1307505391]
+transform = Transform3D(1.12356, 0, 0, 0, 0.0412767, 0, 0, 0, 0.28449, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_dc3cn")
+mesh = SubResource("1")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Shelf"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Shelf" unique_id=107295136]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Shelf/StaticBody3D"]
-shape = SubResource( 3 )
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Shelf/StaticBody3D" unique_id=962189980]
+shape = SubResource("BoxShape3D_tj0yo")

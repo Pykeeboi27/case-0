@@ -1,255 +1,204 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene format=3 uid="uid://b77wpa7n66d1"]
 
-[ext_resource path="res://ItemTextures/painted_metal_shutter_4k.blend/textures/painted_metal_shutter_disp_4k.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://fo8t3dehqd48" path="res://ItemTextures/painted_metal_shutter_4k.blend/textures/painted_metal_shutter_diff_4k.jpg" id="1_wqdca"]
 
-[sub_resource type="BoxMesh" id=1]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s2l0f"]
+albedo_color = Color(0.25219148, 0.21126282, 0.19337288, 1)
+metallic = 1.0
 
-[sub_resource type="StandardMaterial3D" id=2]
-albedo_color = Color( 0.368627, 0.290196, 0.290196, 1 )
+[sub_resource type="BoxMesh" id="1"]
 
-[sub_resource type="ConcavePolygonShape3D" id=3]
-data = PackedVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+[sub_resource type="BoxShape3D" id="BoxShape3D_s2l0f"]
 
-[sub_resource type="StandardMaterial3D" id=4]
-albedo_color = Color( 0.368627, 0.290196, 0.290196, 1 )
+[sub_resource type="BoxShape3D" id="BoxShape3D_wqdca"]
 
-[sub_resource type="ConcavePolygonShape3D" id=5]
-data = PackedVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+[sub_resource type="BoxShape3D" id="BoxShape3D_t75ll"]
 
-[sub_resource type="StandardMaterial3D" id=6]
-albedo_color = Color( 0.368627, 0.290196, 0.290196, 1 )
+[sub_resource type="BoxShape3D" id="BoxShape3D_a3o1h"]
 
-[sub_resource type="ConcavePolygonShape3D" id=7]
-data = PackedVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+[sub_resource type="BoxShape3D" id="BoxShape3D_mbp2c"]
 
-[sub_resource type="StandardMaterial3D" id=8]
-albedo_color = Color( 0.368627, 0.290196, 0.290196, 1 )
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t75ll"]
+albedo_texture = ExtResource("1_wqdca")
+metallic = 1.0
 
-[sub_resource type="ConcavePolygonShape3D" id=9]
-data = PackedVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+[sub_resource type="BoxMesh" id="12"]
 
-[sub_resource type="StandardMaterial3D" id=10]
-albedo_color = Color( 0.368627, 0.290196, 0.290196, 1 )
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wqdca"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
 
-[sub_resource type="ConcavePolygonShape3D" id=11]
-data = PackedVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+[sub_resource type="BoxMesh" id="14"]
 
-[sub_resource type="BoxMesh" id=12]
+[sub_resource type="BoxShape3D" id="BoxShape3D_qtvmw"]
 
-[sub_resource type="StandardMaterial3D" id=13]
-albedo_color = Color( 0.654902, 0.596078, 0.596078, 1 )
-albedo_texture = ExtResource( 1 )
-
-[sub_resource type="BoxMesh" id=14]
-
-[sub_resource type="StandardMaterial3D" id=19]
-albedo_color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="BoxShape3D" id=15]
-extents = Vector3( 1, 1.05714, 0.1975 )
-
-[sub_resource type="Animation" id=18]
-resource_name = "Door_close"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("LeftDoor:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector3( 0.50534, -0.00169694, 0.537426 ), Vector3( 0.347904, -0.00175756, 0.525947 ), Vector3( 0.199998, -0.00181818, 0.446513 ), Vector3( 0.082589, -0.0018788, 0.329327 ), Vector3( 0.0109224, -0.00193939, 0.181939 ), Vector3( -0.015, -0.002, 0.027 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("LeftDoor:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector3( 3.25162e-06, 178.519, 1.85997e-06 ), Vector3( 2.6013e-06, 160.816, 1.48797e-06 ), Vector3( 1.95097e-06, 143.112, 1.11598e-06 ), Vector3( 1.30065e-06, 125.408, 7.43987e-07 ), Vector3( 6.50324e-07, 107.704, 3.71994e-07 ), Vector3( 0, 90, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("LeftDoor:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector3( 0.00772438, 0.27, 0.543665 ), Vector3( 0.0077095, 0.27, 0.544722 ), Vector3( 0.00769462, 0.27, 0.54578 ), Vector3( 0.00767975, 0.27, 0.546837 ), Vector3( 0.00766487, 0.27, 0.547894 ), Vector3( 0.00764999, 0.27, 0.548952 ) ]
-}
-
-[sub_resource type="Animation" id=16]
-resource_name = "Door_open"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("LeftDoor:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector3( -0.0146106, -0.00169694, 0.0266268 ), Vector3( 0.00832921, -0.00169694, 0.18381 ), Vector3( 0.0835598, -0.00169694, 0.329665 ), Vector3( 0.198008, -0.00169694, 0.445311 ), Vector3( 0.348405, -0.00169694, 0.514025 ), Vector3( 0.50534, -0.00169694, 0.537426 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("LeftDoor:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector3( 0, 90, 0 ), Vector3( 6.50324e-07, 107.704, 3.71994e-07 ), Vector3( 1.30065e-06, 125.408, 7.43987e-07 ), Vector3( 1.95097e-06, 143.112, 1.11598e-06 ), Vector3( 2.6013e-06, 160.815, 1.48797e-06 ), Vector3( 3.25162e-06, 178.519, 1.85997e-06 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("LeftDoor:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector3( 0.00764999, 0.27, 0.548952 ), Vector3( 0.00766486, 0.27, 0.547895 ), Vector3( 0.00767974, 0.27, 0.546837 ), Vector3( 0.00769462, 0.27, 0.54578 ), Vector3( 0.0077095, 0.27, 0.544722 ), Vector3( 0.00772438, 0.27, 0.543665 ) ]
-}
-
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id="Animation_wqdca"]
 length = 0.001
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("LeftDoor:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( -0.00153786, -0.00169694, 0.0266268 ) ]
+"values": [Vector3(0.017055511, 0.004317899, 0.24347177)]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("LeftDoor:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
+tracks/1/path = NodePath("LeftDoor:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, 90, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("LeftDoor:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector3( 0.00764999, 0.27, 0.548952 ) ]
+"values": [Vector3(0, 1.5707964, 0)]
 }
 
-[node name="Drawer" type="Node3D"]
-transform = Transform3D( 1.52509, 0, 0, 0, 1, 0, 0, 0, 0.769967, 0, 0.307889, 0 )
+[sub_resource type="Animation" id="Animation_a3o1h"]
+resource_name = "drawer_close"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LeftDoor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.268, 0.004, 0.501), Vector3(0.18846054, 0.0040635797, 0.48754054), Vector3(0.118282765, 0.0041271597, 0.4505525), Vector3(0.06429852, 0.0041907397, 0.39454135), Vector3(0.02650776, 0.0042543192, 0.32401264), Vector3(0.017055511, 0.004317899, 0.24347177)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LeftDoor:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 3.138102, 0), Vector3(0, 2.824641, 0), Vector3(0, 2.51118, 0), Vector3(0, 2.1977186, 0), Vector3(0, 1.8842576, 0), Vector3(0, 1.5707964, 0)]
+}
 
-[node name="Body" type="Node3D" parent="."]
-transform = Transform3D( 0.549477, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+[sub_resource type="Animation" id="Animation_t75ll"]
+resource_name = "drawer_open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LeftDoor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.017055511, 0.004317899, 0.24347177), Vector3(0.027622104, 0.0043178992, 0.3242668), Vector3(0.0644997, 0.0043178992, 0.39524862), Vector3(0.1176318, 0.0043178992, 0.45101675), Vector3(0.19052002, 0.0043178992, 0.4880456), Vector3(0.26810846, 0.0043178992, 0.5006237)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LeftDoor:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, 0), Vector3(0, 1.8843307, 0), Vector3(0, 2.1978652, 0), Vector3(0, 2.5113997, 0), Vector3(0, 2.824934, 0), Vector3(0, 3.1384685, 0)]
+}
 
-[node name="Left" type="MeshInstance3D" parent="Body"]
-transform = Transform3D( 0.03, 0, 0, 0, 0.3, 0, 0, 0, 0.5, 0.0320456, 0, -0.497755 )
-mesh = SubResource( 1 )
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a3o1h"]
+_data = {
+&"RESET": SubResource("Animation_wqdca"),
+&"drawer_close": SubResource("Animation_a3o1h"),
+&"drawer_open": SubResource("Animation_t75ll")
+}
+
+[node name="Drawer" type="Node3D" unique_id=912165849]
+
+[node name="Body" type="Node3D" parent="." unique_id=1360050461]
+
+[node name="Left" type="MeshInstance3D" parent="Body" unique_id=762725526]
+transform = Transform3D(0.03, 0, 0, 0, 0.3, 0, 0, 0, 0.5, -0.21881169, 0, -0.0030858815)
+material_override = SubResource("StandardMaterial3D_s2l0f")
+mesh = SubResource("1")
 skeleton = NodePath("../..")
-material/0 = SubResource( 2 )
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Body/Left"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Body/Left" unique_id=1732055342]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Body/Left/StaticBody3D"]
-shape = SubResource( 3 )
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Body/Left/StaticBody3D" unique_id=304390706]
+shape = SubResource("BoxShape3D_s2l0f")
 
-[node name="Right" type="MeshInstance3D" parent="Body"]
-transform = Transform3D( 0.03, 0, 0, 0, 0.3, 0, 0, 0, 0.5, 0.97806, 0, -0.499377 )
-mesh = SubResource( 1 )
+[node name="Right" type="MeshInstance3D" parent="Body" unique_id=2001698464]
+transform = Transform3D(0.03, 0, 0, 0, 0.3, 0, 0, 0, 0.5, 0.25167274, 0, -0.0047079027)
+material_override = SubResource("StandardMaterial3D_s2l0f")
+mesh = SubResource("1")
 skeleton = NodePath("../..")
-material/0 = SubResource( 4 )
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Body/Right"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Body/Right" unique_id=1053670495]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Body/Right/StaticBody3D"]
-shape = SubResource( 5 )
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Body/Right/StaticBody3D" unique_id=937308887]
+shape = SubResource("BoxShape3D_wqdca")
 
-[node name="Back" type="MeshInstance3D" parent="Body"]
-transform = Transform3D( -1.3015e-09, 0, 0.496247, 0, 0.3, 0, -0.03, 0, -2.18557e-08, 0.499548, 0, -0.970483 )
-mesh = SubResource( 1 )
+[node name="Back" type="MeshInstance3D" parent="Body" unique_id=1235402936]
+transform = Transform3D(-1.3014999e-09, 0, 0.49624696, 0, 0.3, 0, -0.03, 0, -2.18557e-08, 0.013035029, 0, -0.23913106)
+material_override = SubResource("StandardMaterial3D_s2l0f")
+mesh = SubResource("1")
 skeleton = NodePath("../..")
-material/0 = SubResource( 6 )
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Body/Back"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Body/Back" unique_id=1890332024]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Body/Back/StaticBody3D"]
-shape = SubResource( 7 )
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Body/Back/StaticBody3D" unique_id=1821792659]
+shape = SubResource("BoxShape3D_t75ll")
 
-[node name="Bottom" type="MeshInstance3D" parent="Body"]
-transform = Transform3D( 5.73206e-17, 1.31134e-08, 0.5, 0.03, -1.31134e-08, 0, 2.18096e-09, 0.498946, -3.63494e-08, 0.504739, -0.271574, -0.497087 )
-mesh = SubResource( 1 )
+[node name="Bottom" type="MeshInstance3D" parent="Body" unique_id=1470861210]
+transform = Transform3D(5.73206e-17, 1.31134e-08, 0.5, 0.03, -1.31134e-08, 0, 2.18096e-09, 0.498946, -3.63494e-08, 0.018226027, -0.1340995, -0.0024178922)
+material_override = SubResource("StandardMaterial3D_s2l0f")
+mesh = SubResource("1")
 skeleton = NodePath("../..")
-material/0 = SubResource( 8 )
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Body/Bottom"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Body/Bottom" unique_id=1117285414]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Body/Bottom/StaticBody3D"]
-shape = SubResource( 9 )
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Body/Bottom/StaticBody3D" unique_id=857476818]
+shape = SubResource("BoxShape3D_a3o1h")
 
-[node name="Top" type="MeshInstance3D" parent="Body"]
-transform = Transform3D( 5.73206e-17, 1.31134e-08, 0.5, 0.03, -1.31134e-08, 0, 2.18096e-09, 0.498946, -3.63494e-08, 0.504739, 0.27016, -0.497087 )
-mesh = SubResource( 1 )
+[node name="Top" type="MeshInstance3D" parent="Body" unique_id=1450266324]
+transform = Transform3D(5.73206e-17, 1.31134e-08, 0.5, 0.03, -1.31134e-08, 0, 2.18096e-09, 0.498946, -3.63494e-08, 0.018226027, 0.13528672, -0.0024178922)
+material_override = SubResource("StandardMaterial3D_s2l0f")
+mesh = SubResource("1")
 skeleton = NodePath("../..")
-material/0 = SubResource( 10 )
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Body/Top"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Body/Top" unique_id=620691954]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Body/Top/StaticBody3D"]
-shape = SubResource( 11 )
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Body/Top/StaticBody3D" unique_id=1318042404]
+shape = SubResource("BoxShape3D_mbp2c")
 
-[node name="DrawerDoor" type="Node3D" parent="."]
-transform = Transform3D( 0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0.285706, 0, -0.0164409 )
+[node name="DrawerDoor" type="Node3D" parent="." unique_id=121275172]
+transform = Transform3D(0.98925334, 0, 0, 0, 0.9970825, 0, 0, 0, 1, 0, -0.0030067265, 0)
 
-[node name="LeftDoor" type="MeshInstance3D" parent="DrawerDoor"]
-transform = Transform3D( -3.34392e-10, 0, 0.548952, 0, 0.27, 0, -0.00764999, 0, -2.39955e-08, -0.00153786, -0.00169694, 0.0266268 )
-mesh = SubResource( 12 )
-material/0 = SubResource( 13 )
+[node name="LeftDoor" type="MeshInstance3D" parent="DrawerDoor" unique_id=622978531]
+transform = Transform3D(-3.343916e-10, 0, 0.5118639, 0, 0.30176154, 0, -0.007649988, 0, -2.2374282e-08, 0.017055511, 0.004317899, 0.24347177)
+material_override = SubResource("StandardMaterial3D_t75ll")
+mesh = SubResource("12")
 
-[node name="Handle" type="MeshInstance3D" parent="DrawerDoor/LeftDoor"]
-transform = Transform3D( 4.04002e-06, -3.14452, 8.24707e-07, 0, -6.92334e-10, -0.0950325, 0.0460865, -2.36061e-09, 6.19112e-16, -2.55725, -0.0100151, -0.602361 )
-mesh = SubResource( 14 )
+[node name="Handle" type="MeshInstance3D" parent="DrawerDoor/LeftDoor" unique_id=1197768439]
+transform = Transform3D(4.04002e-06, -3.14452, 8.24707e-07, 0, -6.92334e-10, -0.0950325, 0.0460865, -2.3606108e-09, 6.1911205e-16, -0.41534424, -0.0100151, -0.32313824)
+material_override = SubResource("StandardMaterial3D_wqdca")
+mesh = SubResource("14")
 skeleton = NodePath("../..")
-material/0 = SubResource( 19 )
 
-[node name="Area3D" type="Area3D" parent="DrawerDoor/LeftDoor"]
-transform = Transform3D( -1.45705e-06, 0, -33.3333, 0, 3.7037, 0, 4, 0, -1.74846e-07, 0, 0, 0.00615144 )
+[node name="Area3D" type="Area3D" parent="DrawerDoor/LeftDoor" unique_id=707564963]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DrawerDoor/LeftDoor/Area3D"]
-transform = Transform3D( 0.236865, 0, -1.09504e-16, 0, 0.254499, 0, 1.09505e-16, 0, 0.206043, -0.00183189, 0.00203115, 0.00151159 )
-shape = SubResource( 15 )
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DrawerDoor/LeftDoor/Area3D" unique_id=1431085244]
+shape = SubResource("BoxShape3D_qtvmw")
 
-[node name="DrawerDoor" type="AnimationPlayer" parent="DrawerDoor"]
-anims/Door_close = SubResource( 18 )
-anims/Door_open = SubResource( 16 )
-anims/RESET = SubResource( 17 )
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DrawerDoor" unique_id=1761557125]
+libraries/ = SubResource("AnimationLibrary_a3o1h")

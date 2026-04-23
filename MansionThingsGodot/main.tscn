@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://co2o30nbsh4rk"]
+
+[ext_resource type="PackedScene" uid="uid://dir701kb6smyd" path="res://Door.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://gxqmsklf2ohw" path="res://Bed.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://b77wpa7n66d1" path="res://Drawer.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bfsgmkyqoa531" path="res://Chair.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://do5ly505boei6" path="res://Cabinet.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://lredaoc7kfdq" path="res://Box.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bvc0vm8lhfn10" path="res://Shelf.tscn" id="7_5vw27"]
+[ext_resource type="PackedScene" uid="uid://dwqm0fpr8kwg2" path="res://Table.tscn" id="8_kek77"]
+[ext_resource type="PackedScene" uid="uid://f1yc4j3gr6wh" path="res://TableLong.tscn" id="9_kek77"]
+
+[node name="Main" type="Node3D" unique_id=1449774865]
+
+[node name="Door" parent="." unique_id=462389068 instance=ExtResource("1_ig7tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1114932, 0.830419, 0.09535587)
+
+[node name="Bed" parent="." unique_id=791820753 instance=ExtResource("2_0xm2m")]
+transform = Transform3D(0.35637733, 0, 0, 0, 0.24790657, 0, 0, 0, 0.3694286, 0.17907923, 0, 1.1450558)
+
+[node name="Drawer" parent="." unique_id=912165849 instance=ExtResource("3_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.281642, 0.3999334, -0.13805127)
+
+[node name="Chair" parent="." unique_id=1313138653 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2891681, 0, 1.0821184)
+
+[node name="Cabinet" parent="." unique_id=1108154700 instance=ExtResource("5_lquwl")]
+transform = Transform3D(0.5636, 0, 0, 0, 0.708563, 0, 0, 0, 0.625056, -1.8417051, 0, 0.62603664)
+
+[node name="Box" parent="." unique_id=66363428 instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3175929, 0, -0.36133742)
+
+[node name="Shelf" parent="." unique_id=513662214 instance=ExtResource("7_5vw27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45529664, -1.1920929e-07, -0.8390193)
+
+[node name="Table" parent="." unique_id=775088777 instance=ExtResource("8_kek77")]
+transform = Transform3D(1, 0, 0, 0, 0.43467838, 0, 0, 0, 1, 1.3858116, 0, -0.8236766)
+
+[node name="TableLong" parent="." unique_id=226162985 instance=ExtResource("9_kek77")]
+transform = Transform3D(1.4704335, 0, 0, 0, 0.8886436, 0, 0, 0, 1.3127736, -0.7903228, 0, -1.9866139)

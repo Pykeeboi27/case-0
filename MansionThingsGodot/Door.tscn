@@ -1,141 +1,143 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene format=3 uid="uid://dir701kb6smyd"]
 
-[ext_resource path="res://ItemTextures/painted_metal_shutter_4k.blend/textures/painted_metal_shutter_disp_4k.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://dp434cw3l8i5k" path="res://ItemTextures/painted_metal_shutter_4k.blend/textures/painted_metal_shutter_disp_4k.png" id="1"]
 
-[sub_resource type="BoxMesh" id=1]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1vvux"]
+albedo_texture = ExtResource("1")
 
-[sub_resource type="StandardMaterial3D" id=4]
-albedo_color = Color( 0.486275, 0.466667, 0.466667, 1 )
-albedo_texture = ExtResource( 1 )
-metallic = 0.5
-metallic_texture_channel = 3
-roughness = 0.55
+[sub_resource type="BoxMesh" id="1"]
 
-[sub_resource type="SphereMesh" id=3]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iu8q0"]
+albedo_color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+albedo_texture = ExtResource("1")
 
-[sub_resource type="StandardMaterial3D" id=5]
-albedo_color = Color( 0, 0, 0, 1 )
+[sub_resource type="SphereMesh" id="3"]
 
-[sub_resource type="StandardMaterial3D" id=6]
-albedo_color = Color( 0, 0, 0, 1 )
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cuixy"]
+albedo_color = Color(0.04702956, 0.047029573, 0.04702956, 1)
+albedo_texture = ExtResource("1")
 
-[sub_resource type="BoxShape3D" id=2]
+[sub_resource type="BoxShape3D" id="2"]
 
-[sub_resource type="Animation" id=9]
-resource_name = "Door_close"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector3( 0.359965, 0, 0.400636 ), Vector3( 0.265804, 0, 0.382865 ), Vector3( 0.162541, 0, 0.331418 ), Vector3( 0.0823362, 0, 0.243562 ), Vector3( 0.0148735, 0, 0.141144 ), Vector3( -0.00161815, 0, 0.00231841 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector3( 0, 90, 0 ), Vector3( 0, 72, 0 ), Vector3( 0, 54, 0 ), Vector3( 0, 36, 0 ), Vector3( 0, 18, 0 ), Vector3( 0, 0, 0 ) ]
-}
-
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id="7"]
 resource_name = "Door_open"
 length = 0.5
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [ Vector3( 0.00333503, 0, -0.000573039 ), Vector3( 0.00912768, 0, 0.156125 ), Vector3( 0.0649808, 0, 0.257301 ), Vector3( 0.141464, 0, 0.348768 ), Vector3( 0.250715, 0, 0.396546 ), Vector3( 0.359965, 0, 0.400636 ) ]
+"values": [Vector3(0, 0, 0), Vector3(0.024549197, 0, 0.056492638), Vector3(0.04983773, 0, 0.11039726), Vector3(0.09139388, 0, 0.14803433), Vector3(0.13960478, 0, 0.17901653), Vector3(0.19668913, 0, 0.20112556)]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 18, 0 ), Vector3( 0, 36, 0 ), Vector3( 0, 54, 0 ), Vector3( 0, 72, 0 ), Vector3( 0, 90, 0 ) ]
+"values": [Vector3(0, 0, 0), Vector3(0, 0.31415927, 0), Vector3(0, 0.62831855, 0), Vector3(0, 0.94247776, 0), Vector3(0, 1.2566371, 0), Vector3(0, 1.5707964, 0)]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id="8"]
 length = 0.001
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0.00333503, 0, -0.000573039 ) ]
+"values": [Vector3(0.00333503, 0, -0.000573039)]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ) ]
+"values": [Vector3(0, 0, 0)]
 }
 
-[sub_resource type="ConcavePolygonShape3D" id=10]
-data = PackedVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+[sub_resource type="Animation" id="Animation_1vvux"]
+resource_name = "door_close"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.197, 0, 0.201), Vector3(0.14133258, 0, 0.17263088), Vector3(0.09121069, 0, 0.14869836), Vector3(0.050455112, 0, 0.109484226), Vector3(0.025227556, 0, 0.057699844), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, 0), Vector3(0, 1.2566371, 0), Vector3(0, 0.94247776, 0), Vector3(0, 0.62831855, 0), Vector3(0, 0.31415927, 0), Vector3(0, 0, 0)]
+}
 
-[node name="Door" type="Node3D"]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.598873, 0.830419, 0 )
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6xaln"]
+_data = {
+&"Door_open": SubResource("7"),
+&"RESET": SubResource("8"),
+&"door_close": SubResource("Animation_1vvux")
+}
 
-[node name="Door" type="MeshInstance3D" parent="."]
-transform = Transform3D( 0.398632, 0, 0, 0, 0.797265, 0, 0, 0, 0.0399363, 0.00333503, 0, -0.000573039 )
-mesh = SubResource( 1 )
-material/0 = SubResource( 4 )
+[sub_resource type="BoxShape3D" id="BoxShape3D_6xaln"]
 
-[node name="Handle" type="MeshInstance3D" parent="Door"]
-transform = Transform3D( 0.100137, 0, 0, 0, 0.0529763, 0, 0, 0, 1.07224, -0.653398, -0.0428146, 1.8448 )
-mesh = SubResource( 3 )
-material/0 = SubResource( 5 )
+[node name="Door" type="Node3D" unique_id=1985122276]
 
-[node name="Handle2" type="MeshInstance3D" parent="Door"]
-transform = Transform3D( 0.100137, 0, 0, 0, 0.0529763, 0, 0, 0, 1.07224, -0.653398, -0.0428146, -1.85798 )
-mesh = SubResource( 3 )
-material/0 = SubResource( 6 )
+[node name="Door" type="MeshInstance3D" parent="." unique_id=1948374516]
+transform = Transform3D(0.39863208, 0, 0, 0, 0.797265, 0, 0, 0, 0.0399363, 0.00333503, 0, -0.000573039)
+material_override = SubResource("StandardMaterial3D_1vvux")
+mesh = SubResource("1")
 
-[node name="Area3D" type="Area3D" parent="Door"]
+[node name="Handle" type="MeshInstance3D" parent="Door" unique_id=1882687131]
+transform = Transform3D(0.10013699, 0, 0, 0, 0.0529763, 0, 0, 0, 1.07224, -0.3689509, -0.042814594, 0.9171193)
+material_override = SubResource("StandardMaterial3D_iu8q0")
+mesh = SubResource("3")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Door/Area3D"]
-shape = SubResource( 2 )
+[node name="Handle2" type="MeshInstance3D" parent="Door" unique_id=1181128651]
+transform = Transform3D(0.10013699, 0, 0, 0, 0.0529763, 0, 0, 0, 1.07224, -0.37176722, -0.042814594, -0.789742)
+material_override = SubResource("StandardMaterial3D_cuixy")
+mesh = SubResource("3")
 
-[node name="Door" type="AnimationPlayer" parent="Door"]
-anims/Door_close = SubResource( 9 )
-anims/Door_open = SubResource( 7 )
-anims/RESET = SubResource( 8 )
+[node name="Area3D" type="Area3D" parent="Door" unique_id=1244673128]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Door"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door/Area3D" unique_id=925678587]
+shape = SubResource("2")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Door/StaticBody3D"]
-shape = SubResource( 10 )
+[node name="Door" type="AnimationPlayer" parent="Door" unique_id=297787181]
+libraries/ = SubResource("AnimationLibrary_6xaln")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Door" unique_id=457437754]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door/StaticBody3D" unique_id=167681150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005733638, 0, 0)
+shape = SubResource("BoxShape3D_6xaln")
