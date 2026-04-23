@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bfsgmkyqoa531"]
 
+[ext_resource type="Texture2D" uid="uid://dtwwevr0j65nj" path="res://ItemTextures/stained_pine_4k.blend/textures/stained_pine_diff_4k.jpg" id="1_n1mr4"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ks1na"]
 albedo_color = Color(0.27434564, 0.05017946, 0.040283572, 1)
 
@@ -8,6 +10,9 @@ albedo_color = Color(0.27434564, 0.05017946, 0.040283572, 1)
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_n1mr4"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_kh1t1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kh1t1"]
+albedo_texture = ExtResource("1_n1mr4")
 
 [sub_resource type="StandardMaterial3D" id="11"]
 albedo_color = Color(0.239216, 0.121569, 0.121569, 1)
@@ -79,6 +84,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000288725, 0.00507748, -0.0
 
 [node name="Seat" type="MeshInstance3D" parent="Seat" unique_id=1071027444]
 transform = Transform3D(0.397285, 0, 0, 0, 0.0431712, 0, 0, 0, 0.355227, 0.31018, 0.43208504, 0.183671)
+material_override = SubResource("StandardMaterial3D_kh1t1")
 mesh = SubResource("2")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Seat/Seat" unique_id=2086717385]
@@ -91,6 +97,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.667508, 0, 0, 0.187208)
 
 [node name="Back" type="MeshInstance3D" parent="Back" unique_id=787536733]
 transform = Transform3D(0.398045, 0, 0, 0, 0.63151, 0, 0, 0, 0.069152, 0.31052, 0.72392607, 0.22611311)
+material_override = SubResource("StandardMaterial3D_kh1t1")
 mesh = SubResource("3")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Back/Back" unique_id=1015630673]
@@ -103,6 +110,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.888835, 0)
 
 [node name="LeftArm" type="MeshInstance3D" parent="LeftArm" unique_id=1486829938]
 transform = Transform3D(0.0310915, 0, 0, 0, 0.0247429, 0, 0, 0, 0.28053, 0.13565588, -0.3440507, 0.18382306)
+material_override = SubResource("StandardMaterial3D_kh1t1")
 mesh = SubResource("14")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="LeftArm/LeftArm" unique_id=184584649]
@@ -112,6 +120,7 @@ shape = SubResource("BoxShape3D_np02i")
 
 [node name="LeftArmRest" type="MeshInstance3D" parent="LeftArm" unique_id=369200580]
 transform = Transform3D(0.0310915, 0, 0, 0, -3.93916e-10, -0.102173, 0, 0.0247429, -1.22624e-08, 0.13565588, -0.38220042, 0.05505848)
+material_override = SubResource("StandardMaterial3D_kh1t1")
 mesh = SubResource("14")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="LeftArm/LeftArmRest" unique_id=30355755]
@@ -124,6 +133,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.69276303, 0)
 
 [node name="RightArmRest2" type="MeshInstance3D" parent="RightArm" unique_id=2045278744]
 transform = Transform3D(0.0310915, 0, 0, 0, -3.93916e-10, -0.102173, 0, 0.0247429, -1.22624e-08, 0.48637992, -0.19057477, 0.055389404)
+material_override = SubResource("StandardMaterial3D_kh1t1")
 mesh = SubResource("14")
 skeleton = NodePath("../../LeftArm")
 
@@ -134,6 +144,7 @@ shape = SubResource("BoxShape3D_np02i")
 
 [node name="RightArm" type="MeshInstance3D" parent="RightArm" unique_id=1232494739]
 transform = Transform3D(0.0310915, 0, 0, 0, 0.0247429, 0, 0, 0, 0.28053, 0.48691392, -0.15043509, 0.18614407)
+material_override = SubResource("StandardMaterial3D_kh1t1")
 mesh = SubResource("14")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="RightArm/RightArm" unique_id=2103560429]
