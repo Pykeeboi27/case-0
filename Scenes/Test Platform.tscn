@@ -247,5 +247,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3615739, 0.9933393, -8.142
 item_data = ExtResource("10_2pgpu")
 
 [node name="StaticBody3D2" parent="." unique_id=2007511400 instance=ExtResource("9_sbe5v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.74270546, 0.8986325, -7.541258)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.009963, 0.8986325, -7.541258)
 target_door = "none"
