@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://do5ly505boei6"]
 
-[ext_resource type="Texture2D" uid="uid://dtwwevr0j65nj" path="res://ItemTextures/stained_pine_4k.blend/textures/stained_pine_diff_4k.jpg" id="1_63kkc"]
-[ext_resource type="Texture2D" uid="uid://bvbjshwkfqjba" path="res://ItemTextures/stained_pine_4k.blend/textures/stained_pine_disp_4k.png" id="2_q2bme"]
+[ext_resource type="Texture2D" uid="uid://vodviagco7r2" path="res://MansionThingsGodot/textures/stained_pine_diff_4k.jpg" id="1_63kkc"]
+[ext_resource type="Texture2D" uid="uid://mvmfh4xdkb1t" path="res://MansionThingsGodot/textures/stained_pine_disp_4k.png" id="2_q2bme"]
+
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8hpl2"]
 albedo_color = Color(0.78377444, 0.39177302, 0.24719223, 1)

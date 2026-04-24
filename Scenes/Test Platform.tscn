@@ -207,15 +207,19 @@ script = ExtResource("6")
 
 [node name="Slot" parent="CanvasLayer/Control/Hotbar" unique_id=1892835880 instance=ExtResource("5")]
 layout_mode = 2
+ignore_texture_size = true
 
 [node name="Slot2" parent="CanvasLayer/Control/Hotbar" unique_id=211817189 instance=ExtResource("5")]
 layout_mode = 2
+ignore_texture_size = true
 
 [node name="Slot3" parent="CanvasLayer/Control/Hotbar" unique_id=2002225718 instance=ExtResource("5")]
 layout_mode = 2
+ignore_texture_size = true
 
 [node name="Slot4" parent="CanvasLayer/Control/Hotbar" unique_id=102324360 instance=ExtResource("5")]
 layout_mode = 2
+ignore_texture_size = true
 
 [node name="ItemPickup" parent="." unique_id=1109312701 instance=ExtResource("4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.11299, 0.67555094, 0.629415)

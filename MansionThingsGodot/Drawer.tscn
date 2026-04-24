@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b77wpa7n66d1"]
 
-[ext_resource type="Texture2D" uid="uid://fo8t3dehqd48" path="res://ItemTextures/painted_metal_shutter_4k.blend/textures/painted_metal_shutter_diff_4k.jpg" id="1_wqdca"]
+[ext_resource type="Texture2D" uid="uid://vodviagco7r2" path="res://MansionThingsGodot/textures/stained_pine_diff_4k.jpg" id="1_wqdca"]
+
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s2l0f"]
 albedo_color = Color(0.25219148, 0.21126282, 0.19337288, 1)

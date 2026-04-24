@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://f1yc4j3gr6wh"]
 
-[ext_resource type="Texture2D" uid="uid://dtwwevr0j65nj" path="res://ItemTextures/stained_pine_4k.blend/textures/stained_pine_diff_4k.jpg" id="2"]
+[ext_resource type="Texture2D" uid="uid://vodviagco7r2" path="res://MansionThingsGodot/textures/stained_pine_diff_4k.jpg" id="2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ahq54"]
 albedo_color = Color(0.38321832, 0.38321835, 0.38321832, 1)

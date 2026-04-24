@@ -1,1 +1,5 @@
+res://MansionThingsGodot/TableLong.tscn
+res://Inventory.gd
+res://Scenes/Flashlight.tscn
+res://Scripts/Flashlight.gd
 res://Scenes/Test Platform.tscn
