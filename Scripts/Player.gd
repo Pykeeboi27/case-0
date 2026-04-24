@@ -135,7 +135,6 @@ func _physics_process(delta):
 	
 	if interaction.is_colliding():
 		var target = interaction.get_collider()
-		print(target)
 		if target != null and target.has_method("interact"):
 			labeltext.show()
 				
