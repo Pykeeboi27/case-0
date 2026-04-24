@@ -1,25 +1,26 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1777022436
+::res://::1777031276
 Crosshair.png::CompressedTexture2D::7577266811532211490::1777021362::1777021534::1::::<><><>0<>0<>cc7bcbfa87156db0b1aedd4380a44c3e<>res://.godot/imported/Crosshair.png-1956ffc22614618aaaacdf35a0cc4cd2.ctex::
 Flashlight.blend::PackedScene::3502871612332563500::1777021362::1777021566::1::::<><><>0<>0<>417bbb674e3ff11f7829183b5f67b46d<>res://.godot/imported/Flashlight.blend-a1254dc8c3de7e946f58aeffced531ea.scn::
 icon.png::CompressedTexture2D::8794917531344696597::1777021362::1777021533::1::::<><><>0<>0<>fbf1bc17a3116993a675aac7eb30a602<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
 Inventory.gd::GDScript::8412560346007046369::1777021756::0::1::::<>Node<><>0<>0<><>::
-ItemData.gd::GDScript::2835359961146705913::1777021362::0::1::::ItemData<>Resource<><>0<>0<><>::
+ItemData.gd::GDScript::2835359961146705913::1777029466::0::1::::ItemData<>Resource<><>0<>0<><>::
 stained_pine_diff_4k.jpg::CompressedTexture2D::1690362175392062013::1777021362::1777021537::1::::<><><>0<>0<>72d23920fa46cc84d91f5e426a1fbbdb<>res://.godot/imported/stained_pine_diff_4k.jpg-39870f11c1f1bb95f1e57ed6541cf6d9.ctex::
 ::res://Assets/::1777021362
-::res://Assets/items/::1777021533
+::res://Assets/items/::1777029572
 Bed.tscn::PackedScene::-1::1777021362::0::1::::<><><>0<>0<><>::
-flashlight.tres::Resource::-1::1777021362::0::1::::<><><>0<>0<><>::res://Scenes/Flashlight.tscn<>res://ItemData.gd<>res://Assets/items/flashlight_icon.jpg
+flashlight.tres::Resource/ItemData::9057724453450045425::1777029490::0::1::::<><><>0<>0<><>::uid://ddqa1y3fs4pco::::res://Assets/items/flashlight_icon.jpg<>uid://gpqv2y6f4eyh::::res://Scenes/Flashlight.tscn<>uid://bgnp710gtyq3r::::res://ItemData.gd
 flashlight_icon.jpg::CompressedTexture2D::7402906360767199542::1777021362::1777021533::1::::<><><>0<>0<>d92eb448c4a785e175fda0c47153d020<>res://.godot/imported/flashlight_icon.jpg-048ae91803ef3705cea3759d5157f029.ctex::
-::res://MansionThingsGodot/::1777021756
+::res://MansionThingsGodot/::1777031316
 Bed.tscn::PackedScene::469607612958587076::1777021362::0::1::::<><><>0<>0<><>::
 BedMansion.blend::PackedScene::2689002545388467798::1777021362::1777021565::1::::<><><>0<>0<>4e5705d85927b4d81f054effe864f9c5<>res://.godot/imported/BedMansion.blend-b9f42b1a36f6a3c6bfbaf72d32399424.scn::
 Box.tscn::PackedScene::807419948951447322::1777021615::0::1::::<><><>0<>0<><>::uid://vodviagco7r2::::res://MansionThingsGodot/textures/stained_pine_diff_4k.jpg
 Cabinet.tscn::PackedScene::8204549556293267391::1777021627::0::1::::<><><>0<>0<><>::uid://vodviagco7r2::::res://MansionThingsGodot/textures/stained_pine_diff_4k.jpg<>uid://mvmfh4xdkb1t::::res://MansionThingsGodot/textures/stained_pine_disp_4k.png
 Chair.tscn::PackedScene::2774909995994315050::1777021635::0::1::::<><><>0<>0<><>::uid://vodviagco7r2::::res://MansionThingsGodot/textures/stained_pine_diff_4k.jpg
 default_env.tres::Environment::4186156299317798194::1777021362::0::1::::<><><>0<>0<><>::
-Door.tscn::PackedScene::7757856191761459587::1777021645::0::1::::<><><>0<>0<><>::uid://mvmfh4xdkb1t::::res://MansionThingsGodot/textures/stained_pine_disp_4k.png
-Drawer.tscn::PackedScene::138231952325192260::1777021652::0::1::::<><><>0<>0<><>::uid://vodviagco7r2::::res://MansionThingsGodot/textures/stained_pine_diff_4k.jpg
+door2.tscn::PackedScene::2802891457837431398::1777031110::0::1::::<><><>0<>0<><>::uid://bd111fe7bysjt::::res://Scripts/door.gd<>uid://mvmfh4xdkb1t::::res://MansionThingsGodot/textures/stained_pine_disp_4k.png
+drawer.gd::GDScript::837000919205908037::1777029314::0::1::::<>MeshInstance3D<><>0<>0<><>::
+Drawer.tscn::PackedScene::138231952325192260::1777029314::0::1::::<><><>0<>0<><>::uid://vodviagco7r2::::res://MansionThingsGodot/textures/stained_pine_diff_4k.jpg<>uid://l6pju8hituq4::::res://MansionThingsGodot/drawer.gd
 main.tscn::PackedScene::5812124751042346744::1777021362::0::1::::<><><>0<>0<><>::uid://dir701kb6smyd::::res://Door.tscn<>uid://gxqmsklf2ohw::::res://Bed.tscn<>uid://b77wpa7n66d1::::res://Drawer.tscn<>uid://bfsgmkyqoa531::::res://Chair.tscn<>uid://do5ly505boei6::::res://Cabinet.tscn<>uid://lredaoc7kfdq::::res://Box.tscn<>uid://bvc0vm8lhfn10::::res://Shelf.tscn<>uid://dwqm0fpr8kwg2::::res://Table.tscn<>uid://f1yc4j3gr6wh::::res://TableLong.tscn
 Shelf.tscn::PackedScene::3866071263859169017::1777021678::0::1::::<><><>0<>0<><>::uid://rnkeniub382b::::res://MansionThingsGodot/textures/textures/painted_metal_shutter_disp_4k.png
 Table.tscn::PackedScene::8737220190547528959::1777021687::0::1::::<><><>0<>0<><>::uid://vodviagco7r2::::res://MansionThingsGodot/textures/stained_pine_diff_4k.jpg
@@ -31,7 +32,7 @@ stained_pine_rough_4k.exr::::-1::1777021362::1777021362::0::::<><><>0<>0<>439495
 ::res://MansionThingsGodot/textures/textures/::1777021689
 painted_metal_shutter_diff_4k.jpg::CompressedTexture2D::4382988224281333558::1777021362::1777021534::1::::<><><>0<>0<>d0d4ed0bcac3c2204453282f2e42a6d1<>res://.godot/imported/painted_metal_shutter_diff_4k.jpg-53f8a7a044cae3e9ef33015afb5efc58.s3tc.ctex::
 painted_metal_shutter_disp_4k.png::CompressedTexture2D::1220662261825783435::1777021362::1777021689::1::::<><><>0<>0<>69664bdfff49fbed7f6b3b4c54fb3e68<>res://.godot/imported/painted_metal_shutter_disp_4k.png-097e9b5077899f607efcdd148dba503d.s3tc.ctex::
-::res://Scenes/::1777021882
+::res://Scenes/::1777031276
 CanvasLayer.gd::GDScript::6017619101429646212::1777021362::0::1::::<>CanvasLayer<><>0<>0<><>::
 Flashlight.obj::Mesh::3097273926976390686::1777021362::1777021546::1::::<><><>0<>0<>d7d2218252b8547ff4ff353d2f51ae3f<>res://.godot/imported/Flashlight.obj-fdb5e70debdcb37d642777d4bde24523.mesh<*>res://.godot/imported/Flashlight.obj-fdb5e70debdcb37d642777d4bde24523.mesh::
 Flashlight.tscn::PackedScene::453109158317442143::1777021812::0::1::::<><><>0<>0<><>::uid://bkelwckwesj0y::::res://Scenes/Flashlight.obj<>uid://dxaw1p6s2j40f::::res://Scripts/Flashlight.gd
@@ -40,9 +41,9 @@ Hotbar.gd::GDScript::5569292190274188100::1777021362::0::1::::<>HBoxContainer<><
 ItemPickup.gd::GDScript::3505527156317208931::1777021362::0::1::::<>Area3D<><>0<>0<><>::
 ItemPickup.tscn::PackedScene::-1::1777021362::0::1::::<><><>0<>0<><>::res://Scenes/ItemPickup.gd
 Objective.tscn::PackedScene::-1::1777021362::0::1::::<><><>0<>0<><>::
-Player.tscn::PackedScene::8545183456626146556::1777021362::0::1::::<><><>0<>0<><>::uid://curh6yy68vas::::res://Scripts/Player.gd<>uid://df7qqh2d2nues::::res://Crosshair.png
+Player.tscn::PackedScene::8545183456626146556::1777028323::0::1::::<><><>0<>0<><>::uid://curh6yy68vas::::res://Scripts/Player.gd<>uid://df7qqh2d2nues::::res://Crosshair.png
 Slot.tscn::PackedScene::-1::1777021362::0::1::::<><><>0<>0<><>::
-Test Platform.tscn::PackedScene::5143879828513503445::1777021882::0::1::::<><><>0<>0<><>::uid://dt0l6ncdi22vo::::res://Scenes/Player.tscn<>uid://s8vo4rs2dwyl::::res://Scripts/Test Platform.gd<>uid://cry8kpmwix7po::::res://Scenes/CanvasLayer.gd<>res://Scenes/ItemPickup.tscn<>res://Scenes/Slot.tscn<>uid://cll2otth65qpg::::res://Scenes/Hotbar.gd<>res://Assets/items/flashlight.tres<>uid://dcehrqkc7trce::::res://Scenes/lowpolymansion/mansion.tscn
+Test Platform.tscn::PackedScene::5143879828513503445::1777031320::0::1::::<><><>0<>0<><>::uid://dt0l6ncdi22vo::::res://Scenes/Player.tscn<>uid://s8vo4rs2dwyl::::res://Scripts/Test Platform.gd<>uid://cry8kpmwix7po::::res://Scenes/CanvasLayer.gd<>res://Scenes/ItemPickup.tscn<>res://Scenes/Slot.tscn<>uid://cll2otth65qpg::::res://Scenes/Hotbar.gd<>uid://dcehrqkc7trce::::res://Scenes/lowpolymansion/mansion.tscn<>uid://bf60hiaalidv7::::res://MansionThingsGodot/door2.tscn<>uid://d2bvnssv47j0l::::res://Assets/items/flashlight.tres
 Testbody.tscn::PackedScene::-1::1777021362::0::1::::<><><>0<>0<><>::
 ::res://Scenes/lowpolymansion/::1777021534
 Floor2.jpg::CompressedTexture2D::1784809069608713642::1777021362::1777021534::1::::<><><>0<>0<>1fd1004a57ed7c9a2e00c512939af8b6<>res://.godot/imported/Floor2.jpg-e7176b156985579ca7d9447db2bc13bc.s3tc.ctex::
@@ -365,8 +366,9 @@ Wood_Rope_Stairs.obj::Mesh::2917526154121113106::1777021362::1777021559::1::::<>
 Wood_Rope_Straight.obj::Mesh::4344770327121062013::1777021362::1777021559::1::::<><><>0<>0<>e19707630c9c65ba6582c01fdac2d4ed<>res://.godot/imported/Wood_Rope_Straight.obj-51cac80c55bf931760d0b3142765c906.mesh<*>res://.godot/imported/Wood_Rope_Straight.obj-51cac80c55bf931760d0b3142765c906.mesh::
 Wood_Steps.obj::Mesh::5223426173490685075::1777021362::1777021559::1::::<><><>0<>0<>762ca48f0e51f38585817049d3d80e16<>res://.godot/imported/Wood_Steps.obj-fc9c59b853a4471b7d871337d73d0d36.mesh<*>res://.godot/imported/Wood_Steps.obj-fc9c59b853a4471b7d871337d73d0d36.mesh::
 Wood_Steps_Stucco.obj::Mesh::8763809565764197651::1777021362::1777021559::1::::<><><>0<>0<>608dfb1823401cf8531600e8e60ec005<>res://.godot/imported/Wood_Steps_Stucco.obj-b1375125eb800d4211b57c662b3e2d50.mesh<*>res://.godot/imported/Wood_Steps_Stucco.obj-b1375125eb800d4211b57c662b3e2d50.mesh::
-::res://Scripts/::1777021812
-Flashlight.gd::GDScript::8774988495829933379::1777021812::0::1::::<>Node3D<><>0<>0<><>::
+::res://Scripts/::1777031110
+door.gd::GDScript::2652286378918410461::1777031110::0::1::::<>Node3D<><>0<>0<><>::
+Flashlight.gd::GDScript::8774988495829933379::1777028755::0::1::::<>Node3D<><>0<>0<><>::
 Objective UI.gd::GDScript::3184166523810091335::1777021362::0::1::::<>Control<><>0<>0<><>::
-Player.gd::GDScript::182711598223982814::1777021362::0::1::::<>CharacterBody3D<><>0<>0<><>::
+Player.gd::GDScript::182711598223982814::1777029529::0::1::::<>CharacterBody3D<><>0<>0<><>::
 Test Platform.gd::GDScript::1332825259624211931::1777021362::0::1::::<>Node3D<><>0<>0<><>::

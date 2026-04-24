@@ -1,0 +1,11 @@
+res://Scenes/Test Platform.tscn
+res://MansionThingsGodot/Door.tscn
+res://Scripts/door.gd
+res://Scenes/Player.tscn
+res://Scripts/Player.gd
+res://MansionThingsGodot/door1.tscn
+res://Scenes/door2.tscn
+res://ItemData.gd
+res://Scripts/Flashlight.gd
+res://MansionThingsGodot/Drawer.tscn
+res://MansionThingsGodot/drawer.gd

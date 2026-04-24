@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://co2o30nbsh4rk"]
 
-[ext_resource type="PackedScene" uid="uid://dir701kb6smyd" path="res://Door.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://gxqmsklf2ohw" path="res://Bed.tscn" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://b77wpa7n66d1" path="res://Drawer.tscn" id="3_h2yge"]
-[ext_resource type="PackedScene" uid="uid://bfsgmkyqoa531" path="res://Chair.tscn" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://do5ly505boei6" path="res://Cabinet.tscn" id="5_lquwl"]
-[ext_resource type="PackedScene" uid="uid://lredaoc7kfdq" path="res://Box.tscn" id="6_7mycd"]
-[ext_resource type="PackedScene" uid="uid://bvc0vm8lhfn10" path="res://Shelf.tscn" id="7_5vw27"]
-[ext_resource type="PackedScene" uid="uid://dwqm0fpr8kwg2" path="res://Table.tscn" id="8_kek77"]
-[ext_resource type="PackedScene" uid="uid://f1yc4j3gr6wh" path="res://TableLong.tscn" id="9_kek77"]
+[ext_resource type="PackedScene" uid="uid://bf60hiaalidv7" path="res://MansionThingsGodot/Door.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://gxqmsklf2ohw" path="res://MansionThingsGodot/Bed.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://b77wpa7n66d1" path="res://MansionThingsGodot/Drawer.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bfsgmkyqoa531" path="res://MansionThingsGodot/Chair.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://do5ly505boei6" path="res://MansionThingsGodot/Cabinet.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://lredaoc7kfdq" path="res://MansionThingsGodot/Box.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bvc0vm8lhfn10" path="res://MansionThingsGodot/Shelf.tscn" id="7_5vw27"]
+[ext_resource type="PackedScene" uid="uid://dwqm0fpr8kwg2" path="res://MansionThingsGodot/Table.tscn" id="8_kek77"]
+[ext_resource type="PackedScene" uid="uid://f1yc4j3gr6wh" path="res://MansionThingsGodot/TableLong.tscn" id="9_kek77"]
+
 
 [node name="Main" type="Node3D" unique_id=1449774865]
 

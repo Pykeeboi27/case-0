@@ -2,6 +2,7 @@ extends Node3D
 
 var flashlight_on := false
 var is_equipped = false
+var target_use: String = "none"
 
 @onready var batteryicon = $Battery
 
