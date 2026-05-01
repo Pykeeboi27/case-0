@@ -21,8 +21,6 @@ albedo_texture = ExtResource("2_8y1u2")
 albedo_color = Color(0.04702956, 0.047029573, 0.04702956, 1)
 albedo_texture = ExtResource("2_8y1u2")
 
-[sub_resource type="BoxShape3D" id="2"]
-
 [sub_resource type="Animation" id="7"]
 resource_name = "Door_open"
 length = 0.5
@@ -134,11 +132,6 @@ mesh = SubResource("3")
 transform = Transform3D(0.10013699, 0, 0, 0, 0.0529763, 0, 0, 0, 1.07224, -0.37176722, -0.042814594, -0.789742)
 material_override = SubResource("StandardMaterial3D_cuixy")
 mesh = SubResource("3")
-
-[node name="Area3D" type="Area3D" parent="Door" unique_id=685667216]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Door/Area3D" unique_id=1859896248]
-shape = SubResource("2")
 
 [node name="Door" type="AnimationPlayer" parent="Door" unique_id=225782901]
 libraries/ = SubResource("AnimationLibrary_6xaln")
