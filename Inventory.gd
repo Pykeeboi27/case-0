@@ -8,6 +8,8 @@ signal slot_selected
 
 var hotbar: Array = []
 var selected_slot: int
+var current_battery: int = 1000
+var max_battery: int = 1000
 
 func _ready():
 	hotbar.resize(HOTBAR_SIZE)

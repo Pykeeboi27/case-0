@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b77wpa7n66d1"]
 
-[ext_resource type="Texture2D" uid="uid://fo8t3dehqd48" path="res://ItemTextures/painted_metal_shutter_4k.blend/textures/painted_metal_shutter_diff_4k.jpg" id="1_wqdca"]
+[ext_resource type="Texture2D" uid="uid://vodviagco7r2" path="res://MansionThingsGodot/textures/stained_pine_diff_4k.jpg" id="1_wqdca"]
+[ext_resource type="Script" uid="uid://l6pju8hituq4" path="res://MansionThingsGodot/drawer.gd" id="2_qhx8t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s2l0f"]
 albedo_color = Color(0.25219148, 0.21126282, 0.19337288, 1)
@@ -188,6 +189,7 @@ transform = Transform3D(0.98925334, 0, 0, 0, 0.9970825, 0, 0, 0, 1, 0, -0.003006
 transform = Transform3D(-3.343916e-10, 0, 0.5118639, 0, 0.30176154, 0, -0.007649988, 0, -2.2374282e-08, 0.017055511, 0.004317899, 0.24347177)
 material_override = SubResource("StandardMaterial3D_t75ll")
 mesh = SubResource("12")
+script = ExtResource("2_qhx8t")
 
 [node name="Handle" type="MeshInstance3D" parent="DrawerDoor/LeftDoor" unique_id=1197768439]
 transform = Transform3D(4.04002e-06, -3.14452, 8.24707e-07, 0, -6.92334e-10, -0.0950325, 0.0460865, -2.3606108e-09, 6.1911205e-16, -0.41534424, -0.0100151, -0.32313824)

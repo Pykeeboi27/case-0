@@ -1,14 +1,18 @@
 [gd_scene format=3 uid="uid://co2o30nbsh4rk"]
 
-[ext_resource type="PackedScene" uid="uid://dir701kb6smyd" path="res://Door.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://gxqmsklf2ohw" path="res://Bed.tscn" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://b77wpa7n66d1" path="res://Drawer.tscn" id="3_h2yge"]
-[ext_resource type="PackedScene" uid="uid://bfsgmkyqoa531" path="res://Chair.tscn" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://do5ly505boei6" path="res://Cabinet.tscn" id="5_lquwl"]
-[ext_resource type="PackedScene" uid="uid://lredaoc7kfdq" path="res://Box.tscn" id="6_7mycd"]
-[ext_resource type="PackedScene" uid="uid://bvc0vm8lhfn10" path="res://Shelf.tscn" id="7_5vw27"]
-[ext_resource type="PackedScene" uid="uid://dwqm0fpr8kwg2" path="res://Table.tscn" id="8_kek77"]
-[ext_resource type="PackedScene" uid="uid://f1yc4j3gr6wh" path="res://TableLong.tscn" id="9_kek77"]
+[ext_resource type="PackedScene" uid="uid://bf60hiaalidv7" path="res://MansionThingsGodot/Door.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://gxqmsklf2ohw" path="res://MansionThingsGodot/Bed.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://b77wpa7n66d1" path="res://MansionThingsGodot/Drawer.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bfsgmkyqoa531" path="res://MansionThingsGodot/Chair.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://do5ly505boei6" path="res://MansionThingsGodot/Cabinet.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://lredaoc7kfdq" path="res://MansionThingsGodot/Box.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bvc0vm8lhfn10" path="res://MansionThingsGodot/Shelf.tscn" id="7_5vw27"]
+[ext_resource type="PackedScene" uid="uid://dwqm0fpr8kwg2" path="res://MansionThingsGodot/Table.tscn" id="8_kek77"]
+[ext_resource type="PackedScene" uid="uid://f1yc4j3gr6wh" path="res://MansionThingsGodot/TableLong.tscn" id="9_kek77"]
+[ext_resource type="PackedScene" uid="uid://cukyhxkm40g21" path="res://MansionThingsGodot/DasAToilet.blend" id="10_o3lpm"]
+[ext_resource type="PackedScene" uid="uid://yx62q0iad6pt" path="res://MansionThingsGodot/Vase.blend" id="11_os8kn"]
+[ext_resource type="PackedScene" uid="uid://cd24kt6ynpok5" path="res://MansionThingsGodot/Bathtub.blend" id="12_umlna"]
+[ext_resource type="PackedScene" uid="uid://bektqj10t67xa" path="res://MansionThingsGodot/BedMansion.blend" id="13_y8x5q"]
 
 [node name="Main" type="Node3D" unique_id=1449774865]
 
@@ -38,3 +42,15 @@ transform = Transform3D(1, 0, 0, 0, 0.43467838, 0, 0, 0, 1, 1.3858116, 0, -0.823
 
 [node name="TableLong" parent="." unique_id=226162985 instance=ExtResource("9_kek77")]
 transform = Transform3D(1.4704335, 0, 0, 0, 0.8886436, 0, 0, 0, 1.3127736, -0.7903228, 0, -1.9866139)
+
+[node name="DasAToilet" parent="." unique_id=436234857 instance=ExtResource("10_o3lpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6817014, 0, 0.7358608)
+
+[node name="Vase" parent="." unique_id=1996537847 instance=ExtResource("11_os8kn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.94828194, 0.5557453, -0.5410541)
+
+[node name="Bathtub" parent="." unique_id=56413579 instance=ExtResource("12_umlna")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69247687, 0, -4.6834426)
+
+[node name="BedMansion" parent="." unique_id=678612350 instance=ExtResource("13_y8x5q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8304341, 0, 3.320516)

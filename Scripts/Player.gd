@@ -15,6 +15,7 @@ var mouseDelta: Vector2 = Vector2()
 var pickedObject
 var objectPullPower: float = 4.0
 var current_item = null
+var item_target_use: String = "none"
 
 # --- HEAD BOB ---
 @export var bobFrequency: float = 20.0
@@ -170,5 +171,6 @@ func _on_slot_selected(index):
 
 	if item and item.mesh_scene:
 		current_item = item.mesh_scene.instantiate()
+		item_target_use = item.target_use
 		current_item.is_equipped = true
 		itemhand.add_child(current_item)

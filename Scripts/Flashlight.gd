@@ -2,6 +2,7 @@ extends Node3D
 
 var flashlight_on := false
 var is_equipped = false
+var target_use: String = "none"
 
 @onready var batteryicon = $Battery
 
@@ -17,8 +18,9 @@ func _input(event: InputEvent) -> void:
 	$SpotLight3D.light_energy = 16 if flashlight_on else 0
 
 func _physics_process(delta: float) -> void:
+	$Battery.value = Inventory.current_battery
 	if flashlight_on and $Battery.value > 0:
-		$Battery.value -= 1
+		Inventory.current_battery -= 1
 	else:
 		flashlight_on = false
 		$SpotLight3D.light_energy = 0
