@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c6fty8n6j4cpv"]
+
+[ext_resource type="Script" uid="uid://c41du4jhrfuoy" path="res://Scenes/vii.gd" id="1_a3yha"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_nhnxp"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a3yha"]
+
+[node name="vii" type="CharacterBody3D" unique_id=334072776]
+script = ExtResource("1_a3yha")
+chase_speed = 4.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1793506109]
+mesh = SubResource("CapsuleMesh_nhnxp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=332456362]
+shape = SubResource("CapsuleShape3D_a3yha")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=2144760920]

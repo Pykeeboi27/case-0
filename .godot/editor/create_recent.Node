@@ -1,6 +1,13 @@
+NavigationRegion3D
+MeshInstance3D
+NavigationAgent3D
+CollisionShape3D
+CharacterBody3D
+Area3D
+AnimationPlayer
+NavigationLink3D
 Timer
 Label
 HBoxContainer
 CanvasLayer
-CollisionShape3D
 StaticBody3D

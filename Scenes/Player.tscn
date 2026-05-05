@@ -6,7 +6,7 @@
 [sub_resource type="CapsuleShape3D" id="1"]
 height = 2.760376
 
-[node name="Player" type="CharacterBody3D" unique_id=2134098255]
+[node name="Player" type="CharacterBody3D" unique_id=2134098255 groups=["player"]]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("2")
 moveSpeed = 10.0
