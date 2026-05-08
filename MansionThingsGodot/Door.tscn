@@ -121,7 +121,6 @@ shape = SubResource("BoxShape3D_8y1u2")
 transform = Transform3D(0.39863208, 0, 0, 0, 0.797265, 0, 0, 0, 0.0399363, 0.00333503, 0, -0.000573039)
 material_override = SubResource("StandardMaterial3D_1vvux")
 mesh = SubResource("1")
-script = ExtResource("1_8y1u2")
 
 [node name="Handle" type="MeshInstance3D" parent="Door" unique_id=403470789]
 transform = Transform3D(0.10013699, 0, 0, 0, 0.0529763, 0, 0, 0, 1.07224, -0.3689509, -0.042814594, 0.9171193)

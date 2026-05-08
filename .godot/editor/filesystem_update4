@@ -1,5 +1,5 @@
-res://Scenes/vii.tscn
-res://Scenes/Test Platform.tscn
-res://Scenes/vii.gd
-res://Scenes/lowpolymansion/mansion.tscn
-res://Scenes/Player.tscn
+res://MansionThingsGodot/Door.tscn
+res://Scenes/ItemPickup.tscn
+res://Scenes/ItemPickup.gd
+res://MansionThingsGodot/drawer.gd
+res://Scripts/door.gd

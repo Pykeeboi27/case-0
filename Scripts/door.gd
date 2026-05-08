@@ -2,12 +2,16 @@ extends Node3D
 
 var is_open = false
 var is_locked = false
+var opened_once = false
 @export var required_item: String
 @export var target_door: String
 @onready var animationplayer = $Door/Door
 @onready var interact_door = $CanvasLayer/HBoxContainer/Label
 @onready var timer = $Timer
 
+func _ready() -> void:
+	randomize()
+	
 func interact(player):
 	if !is_open and !is_locked and player.item_target_use == target_door:
 		open_door()
