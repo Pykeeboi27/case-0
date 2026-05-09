@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1778318681
+::res://::1778329336
 character_body_3d.gd::GDScript::8221713141913999470::1778219644::0::1::::<>CharacterBody3D<><>0<>0<><>::
 Crosshair.png::CompressedTexture2D::7577266811532211490::1777021362::1777021534::1::::<><><>0<>0<>cc7bcbfa87156db0b1aedd4380a44c3e<>res://.godot/imported/Crosshair.png-1956ffc22614618aaaacdf35a0cc4cd2.ctex::
 Flashlight.blend::PackedScene::3502871612332563500::1777021362::1777021566::1::::<><><>0<>0<>417bbb674e3ff11f7829183b5f67b46d<>res://.godot/imported/Flashlight.blend-a1254dc8c3de7e946f58aeffced531ea.scn::
@@ -13,7 +13,7 @@ Bed.tscn::PackedScene::-1::1777021362::0::1::::<><><>0<>0<><>::
 flashlight.tres::Resource/ItemData::9057724453450045425::1777029490::0::1::::<><><>0<>0<><>::uid://ddqa1y3fs4pco::::res://Assets/items/flashlight_icon.jpg<>uid://gpqv2y6f4eyh::::res://Scenes/Flashlight.tscn<>uid://bgnp710gtyq3r::::res://ItemData.gd
 flashlight_icon.jpg::CompressedTexture2D::7402906360767199542::1777021362::1777021533::1::::<><><>0<>0<>d92eb448c4a785e175fda0c47153d020<>res://.godot/imported/flashlight_icon.jpg-048ae91803ef3705cea3759d5157f029.ctex::
 ::res://Audio/::1778322517
-::res://Audio/JumpScare/::1778322527
+::res://Audio/JumpScare/::1778322530
 child-jumpscare-2.mp3::AudioStreamMP3::684259610120235233::1778322527::1778322530::1::::<><><>0<>0<>3c02a3bcefeca895273be52ec22f0e15<>res://.godot/imported/child-jumpscare-2.mp3-4437e53f0fa527e5d9c4dda3b6c471ba.mp3str::
 child-jumpscare.mp3::AudioStreamMP3::3187191083236934100::1778322527::1778322530::1::::<><><>0<>0<>30c00dba4fd71ca4bfa16a8603751755<>res://.godot/imported/child-jumpscare.mp3-f321ea57578e514b93a3453f37ad6f7e.mp3str::
 ::res://Audio/Player/::1778318692
@@ -25,7 +25,7 @@ monster-sound-effect (1).mp3::AudioStreamMP3::8181828918691307819::1778318503::1
 scary-whisper (1).mp3::AudioStreamMP3::2697193376913822429::1778318503::1778318691::1::::<><><>0<>0<>6a7eef3c9047c94c0d98254a88135efb<>res://.godot/imported/scary-whisper (1).mp3-9a22745553542d792507a343ae415e66.mp3str::
 slashed.mp3::AudioStreamMP3::6654338138815393479::1778318503::1778318691::1::::<><><>0<>0<>5c91b64beb56e4c40303ae1cf47c4de5<>res://.godot/imported/slashed.mp3-f1a83875512eb138c257b19ee188b28f.mp3str::
 WindCreaking.mp3::AudioStreamMP3::6772509374426355113::1778318503::1778318691::1::::<><><>0<>0<>9d536db5993dee16c0f70d2694231b80<>res://.godot/imported/WindCreaking.mp3-4f48df3c9b135dabae8447bdd33563db.mp3str::
-::res://MansionThingsGodot/::1778322422
+::res://MansionThingsGodot/::1778327375
 Bathtub.blend::PackedScene::5040925795330207922::1778219644::1778219677::1::::<><><>0<>0<>d70221191eb9493110ebd1ad6f7ac3f4<>res://.godot/imported/Bathtub.blend-bc40ec1197d38543c6bfa346740373d9.scn::
 Bed.tscn::PackedScene::469607612958587076::1777021362::0::1::::<><><>0<>0<><>::
 BedMansion.blend::PackedScene::2689002545388467798::1778219644::1778320305::1::::<><><>0<>0<>4e5705d85927b4d81f054effe864f9c5<>res://.godot/imported/BedMansion.blend-b9f42b1a36f6a3c6bfbaf72d32399424.scn::
@@ -34,9 +34,9 @@ Cabinet.tscn::PackedScene::8204549556293267391::1777021627::0::1::::<><><>0<>0<>
 Chair.tscn::PackedScene::2774909995994315050::1777021635::0::1::::<><><>0<>0<><>::uid://vodviagco7r2::::res://MansionThingsGodot/textures/stained_pine_diff_4k.jpg
 DasAToilet.blend::PackedScene::6198732950141243744::1778219644::1778219677::1::::<><><>0<>0<>7e4b11ecdf1defca9fc217e2fcec33c0<>res://.godot/imported/DasAToilet.blend-eb16a598b208938019b5c750a3555fb0.scn::
 default_env.tres::Environment::4186156299317798194::1777021362::0::1::::<><><>0<>0<><>::
-Door.tscn::PackedScene::2802891457837431398::1778220144::0::1::::<><><>0<>0<><>::uid://bd111fe7bysjt::::res://Scripts/door.gd<>uid://mvmfh4xdkb1t::::res://MansionThingsGodot/textures/stained_pine_disp_4k.png
-drawer.gd::GDScript::837000919205908037::1778322422::0::1::::<>Node3D<><>0<>0<><>::
-Drawer.tscn::PackedScene::138231952325192260::1778322422::0::1::::<><><>0<>0<><>::uid://vodviagco7r2::::res://MansionThingsGodot/textures/stained_pine_diff_4k.jpg<>uid://l6pju8hituq4::::res://MansionThingsGodot/drawer.gd
+Door.tscn::PackedScene::2802891457837431398::1778326716::0::1::::<><><>0<>0<><>::uid://bd111fe7bysjt::::res://Scripts/door.gd<>uid://mvmfh4xdkb1t::::res://MansionThingsGodot/textures/stained_pine_disp_4k.png
+drawer.gd::GDScript::837000919205908037::1778327334::0::1::::<>Node3D<><>0<>0<><>::
+Drawer.tscn::PackedScene::138231952325192260::1778327375::0::1::::<><><>0<>0<><>::uid://vodviagco7r2::::res://MansionThingsGodot/textures/stained_pine_diff_4k.jpg<>uid://l6pju8hituq4::::res://MansionThingsGodot/drawer.gd<>uid://bln5tovx67qs7::::res://Audio/JumpScare/child-jumpscare.mp3<>uid://j0pwkd3vwi86::::res://Audio/JumpScare/child-jumpscare-2.mp3
 Main.tscn::PackedScene::-1::1778318481::0::1::::<><><>0<>0<><>::res://Chair.tscn<>res://Drawer.tscn<>res://Door.tscn<>res://Shelf.tscn<>res://Table.tscn<>res://TableLong.tscn<>res://Bed.tscn<>res://Cabinet.tscn<>res://Box.tscn
 MansionDoor.tscn::PackedScene::4768923539156435410::1778320808::0::1::::<><><>0<>0<><>::uid://tkex35h8o76h::::res://MansionThingsGodot/textures/rough_pine_door_disp_4k.png<>uid://bd111fe7bysjt::::res://Scripts/door.gd<>uid://bcmyy7w8a65gc::::res://MansionThingsGodot/textures/rough_pine_door_diff_4k.jpg
 Mirror.tscn::PackedScene::3194981463425201555::1778219668::0::1::::<><><>0<>0<><>::
@@ -55,18 +55,19 @@ stained_pine_rough_4k.exr::::-1::1777021362::1777021362::0::::<><><>0<>0<>439495
 ::res://MansionThingsGodot/textures/textures/::1777021689
 painted_metal_shutter_diff_4k.jpg::CompressedTexture2D::4382988224281333558::1777021362::1777021534::1::::<><><>0<>0<>d0d4ed0bcac3c2204453282f2e42a6d1<>res://.godot/imported/painted_metal_shutter_diff_4k.jpg-53f8a7a044cae3e9ef33015afb5efc58.s3tc.ctex::
 painted_metal_shutter_disp_4k.png::CompressedTexture2D::1220662261825783435::1777021362::1777021689::1::::<><><>0<>0<>69664bdfff49fbed7f6b3b4c54fb3e68<>res://.godot/imported/painted_metal_shutter_disp_4k.png-097e9b5077899f607efcdd148dba503d.s3tc.ctex::
-::res://Scenes/::1778321854
+::res://Scenes/::1778327199
 CanvasLayer.gd::GDScript::6017619101429646212::1777021362::0::1::::<>CanvasLayer<><>0<>0<><>::
 Flashlight.obj::Mesh::3097273926976390686::1777021362::1777021546::1::::<><><>0<>0<>d7d2218252b8547ff4ff353d2f51ae3f<>res://.godot/imported/Flashlight.obj-fdb5e70debdcb37d642777d4bde24523.mesh<*>res://.godot/imported/Flashlight.obj-fdb5e70debdcb37d642777d4bde24523.mesh::
 Flashlight.tscn::PackedScene::453109158317442143::1777021812::0::1::::<><><>0<>0<><>::uid://bkelwckwesj0y::::res://Scenes/Flashlight.obj<>uid://dxaw1p6s2j40f::::res://Scripts/Flashlight.gd
 hand_light.blend::PackedScene::8159502501776647766::1777021362::1777021566::1::::<><><>0<>0<>0505b842fc60b78e648a65a2a4ca60ba<>res://.godot/imported/hand_light.blend-73b606a91e968a4f2192011aae9bbb4f.scn::
-Hotbar.gd::GDScript::5569292190274188100::1777021362::0::1::::<>HBoxContainer<><>0<>0<><>::
+Hotbar.gd::GDScript::5569292190274188100::1778326373::0::1::::<>HBoxContainer<><>0<>0<><>::
 ItemPickup.gd::GDScript::3505527156317208931::1778224938::0::1::::<>Area3D<><>0<>0<><>::
 ItemPickup.tscn::PackedScene::6998308834864284206::1778224938::0::1::::<><><>0<>0<><>::uid://bp7drxibgcffv::::res://Scenes/ItemPickup.gd
 Objective.tscn::PackedScene::-1::1777021362::0::1::::<><><>0<>0<><>::
-Player.tscn::PackedScene::8545183456626146556::1778318503::0::1::::<><><>0<>0<><>::uid://curh6yy68vas::::res://Scripts/Player.gd<>uid://c7a6p3d7uy5tl::::res://Audio/Player/footstep1.mp3<>uid://beosm7jbonam4::::res://Audio/Player/scary-whisper (1).mp3<>uid://df7qqh2d2nues::::res://Crosshair.png<>uid://d1775g2aibcdm::::res://Audio/Player/heartbeat-sound-chase.mp3<>uid://dotlr6dxygjm6::::res://Audio/Player/monster-sound-effect (1).mp3<>uid://dv4ofxpcwvxx3::::res://Audio/Player/kids-screaming-lowered.mp3<>uid://c3qwifl32ibsr::::res://Audio/Player/WindCreaking.mp3
-Slot.tscn::PackedScene::-1::1777021362::0::1::::<><><>0<>0<><>::
-Test Platform.tscn::PackedScene::5143879828513503445::1778321854::0::1::::<><><>0<>0<><>::uid://dt0l6ncdi22vo::::res://Scenes/Player.tscn<>uid://s8vo4rs2dwyl::::res://Scripts/Test Platform.gd<>uid://cry8kpmwix7po::::res://Scenes/CanvasLayer.gd<>uid://c6ybehnpemawc::::res://Scenes/ItemPickup.tscn<>res://Scenes/Slot.tscn<>uid://cll2otth65qpg::::res://Scenes/Hotbar.gd<>uid://dcehrqkc7trce::::res://Scenes/lowpolymansion/mansion.tscn<>uid://bf60hiaalidv7::::res://MansionThingsGodot/Door.tscn<>uid://d2bvnssv47j0l::::res://Assets/items/flashlight.tres<>uid://c6fty8n6j4cpv::::res://Scenes/vii.tscn<>uid://b87dqd42bcv3g::::res://MansionThingsGodot/MansionDoor.tscn<>uid://b77wpa7n66d1::::res://MansionThingsGodot/Drawer.tscn
+Player.tscn::PackedScene::8545183456626146556::1778324252::0::1::::<><><>0<>0<><>::uid://curh6yy68vas::::res://Scripts/Player.gd<>uid://c7a6p3d7uy5tl::::res://Audio/Player/footstep1.mp3<>uid://beosm7jbonam4::::res://Audio/Player/scary-whisper (1).mp3<>uid://df7qqh2d2nues::::res://Crosshair.png<>uid://d1775g2aibcdm::::res://Audio/Player/heartbeat-sound-chase.mp3<>uid://dotlr6dxygjm6::::res://Audio/Player/monster-sound-effect (1).mp3<>uid://dv4ofxpcwvxx3::::res://Audio/Player/kids-screaming-lowered.mp3<>uid://c3qwifl32ibsr::::res://Audio/Player/WindCreaking.mp3
+slot.gd::GDScript::626264343566522135::1778326338::0::1::::<>TextureButton<><>0<>0<><>::
+Slot.tscn::PackedScene::2321297505249062665::1778326373::0::1::::<><><>0<>0<><>::uid://i6mqnp752160::::res://Scenes/slot.gd
+Test Platform.tscn::PackedScene::5143879828513503445::1778327199::0::1::::<><><>0<>0<><>::uid://dt0l6ncdi22vo::::res://Scenes/Player.tscn<>uid://s8vo4rs2dwyl::::res://Scripts/Test Platform.gd<>uid://cry8kpmwix7po::::res://Scenes/CanvasLayer.gd<>uid://c6ybehnpemawc::::res://Scenes/ItemPickup.tscn<>uid://8cpov72vuh2h::::res://Scenes/Slot.tscn<>uid://cll2otth65qpg::::res://Scenes/Hotbar.gd<>uid://dcehrqkc7trce::::res://Scenes/lowpolymansion/mansion.tscn<>uid://bf60hiaalidv7::::res://MansionThingsGodot/Door.tscn<>uid://d2bvnssv47j0l::::res://Assets/items/flashlight.tres<>uid://c6fty8n6j4cpv::::res://Scenes/vii.tscn<>uid://b87dqd42bcv3g::::res://MansionThingsGodot/MansionDoor.tscn<>uid://b77wpa7n66d1::::res://MansionThingsGodot/Drawer.tscn
 Testbody.tscn::PackedScene::-1::1777021362::0::1::::<><><>0<>0<><>::
 vii.gd::GDScript::6862211058772472476::1778318503::0::1::::<>CharacterBody3D<><>0<>0<><>::
 vii.tscn::PackedScene::6960215645626465203::1778219668::0::1::::<><><>0<>0<><>::uid://c41du4jhrfuoy::::res://Scenes/vii.gd
@@ -391,8 +392,8 @@ Wood_Rope_Stairs.obj::Mesh::2917526154121113106::1777021362::1777021559::1::::<>
 Wood_Rope_Straight.obj::Mesh::4344770327121062013::1777021362::1777021559::1::::<><><>0<>0<>e19707630c9c65ba6582c01fdac2d4ed<>res://.godot/imported/Wood_Rope_Straight.obj-51cac80c55bf931760d0b3142765c906.mesh<*>res://.godot/imported/Wood_Rope_Straight.obj-51cac80c55bf931760d0b3142765c906.mesh::
 Wood_Steps.obj::Mesh::5223426173490685075::1777021362::1777021559::1::::<><><>0<>0<>762ca48f0e51f38585817049d3d80e16<>res://.godot/imported/Wood_Steps.obj-fc9c59b853a4471b7d871337d73d0d36.mesh<*>res://.godot/imported/Wood_Steps.obj-fc9c59b853a4471b7d871337d73d0d36.mesh::
 Wood_Steps_Stucco.obj::Mesh::8763809565764197651::1777021362::1777021559::1::::<><><>0<>0<>608dfb1823401cf8531600e8e60ec005<>res://.godot/imported/Wood_Steps_Stucco.obj-b1375125eb800d4211b57c662b3e2d50.mesh<*>res://.godot/imported/Wood_Steps_Stucco.obj-b1375125eb800d4211b57c662b3e2d50.mesh::
-::res://Scripts/::1778320805
-door.gd::GDScript::2652286378918410461::1778320805::0::1::::<>Node3D<><>0<>0<><>::
+::res://Scripts/::1778324366
+door.gd::GDScript::2652286378918410461::1778324366::0::1::::<>Node3D<><>0<>0<><>::
 Flashlight.gd::GDScript::8774988495829933379::1777028755::0::1::::<>Node3D<><>0<>0<><>::
 Objective UI.gd::GDScript::3184166523810091335::1777021362::0::1::::<>Control<><>0<>0<><>::
 Player.gd::GDScript::182711598223982814::1778318503::0::1::::<>CharacterBody3D<><>0<>0<><>::
