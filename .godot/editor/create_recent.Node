@@ -1,3 +1,9 @@
+Label
+Panel
+AudioStreamPlayer
+Node3D
+StaticBody3D
+AudioStreamPlayer3D
 NavigationRegion3D
 MeshInstance3D
 NavigationAgent3D
@@ -6,8 +12,3 @@ CharacterBody3D
 Area3D
 AnimationPlayer
 NavigationLink3D
-Timer
-Label
-HBoxContainer
-CanvasLayer
-StaticBody3D

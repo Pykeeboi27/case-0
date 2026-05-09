@@ -4,7 +4,9 @@ var slots = []
 
 func _ready():
 	slots = get_children()
-
+	for i in range(slots.size()):
+		slots[i].hotbarnumber_label.text = str(i+1)
+		
 	for i in range(slots.size()):
 		slots[i].connect("pressed", Callable(self, "_on_slot_pressed").bind(i))
 

@@ -1,7 +1,13 @@
 [gd_scene format=3 uid="uid://dt0l6ncdi22vo"]
 
 [ext_resource type="Script" uid="uid://curh6yy68vas" path="res://Scripts/Player.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://c7a6p3d7uy5tl" path="res://Audio/Player/footstep1.mp3" id="3_gntrk"]
+[ext_resource type="AudioStream" uid="uid://beosm7jbonam4" path="res://Audio/Player/scary-whisper (1).mp3" id="3_megsn"]
 [ext_resource type="Texture2D" uid="uid://df7qqh2d2nues" path="res://Crosshair.png" id="4"]
+[ext_resource type="AudioStream" uid="uid://d1775g2aibcdm" path="res://Audio/Player/heartbeat-sound-chase.mp3" id="4_dewec"]
+[ext_resource type="AudioStream" uid="uid://dotlr6dxygjm6" path="res://Audio/Player/monster-sound-effect (1).mp3" id="4_yoq75"]
+[ext_resource type="AudioStream" uid="uid://dv4ofxpcwvxx3" path="res://Audio/Player/kids-screaming-lowered.mp3" id="5_bhhdu"]
+[ext_resource type="AudioStream" uid="uid://c3qwifl32ibsr" path="res://Audio/Player/WindCreaking.mp3" id="5_ksbbd"]
 
 [sub_resource type="CapsuleShape3D" id="1"]
 height = 2.760376
@@ -9,7 +15,7 @@ height = 2.760376
 [node name="Player" type="CharacterBody3D" unique_id=2134098255 groups=["player"]]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 script = ExtResource("2")
-moveSpeed = 10.0
+ambience_sounds = Array[AudioStream]([ExtResource("3_megsn"), ExtResource("4_yoq75"), ExtResource("5_ksbbd"), ExtResource("5_bhhdu")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=624035815]
 transform = Transform3D(0.99999976, 0, 0, 0, 0.9999899, -0.0044506635, 0, 0.0044506635, 0.9999899, 0, 1.3884867, 0.0006163668)
@@ -60,3 +66,12 @@ offset_bottom = 20.0
 [node name="InteractLabel" type="Label" parent="CanvasLayer/InteractContainer" unique_id=651488417]
 layout_mode = 2
 text = "Press \"E\" To Interact"
+
+[node name="FootstepAudioPlayer" type="AudioStreamPlayer3D" parent="." unique_id=2082461989]
+stream = ExtResource("3_gntrk")
+
+[node name="HeartbeatPlayer" type="AudioStreamPlayer" parent="." unique_id=479955949]
+stream = ExtResource("4_dewec")
+volume_db = 20.0
+
+[node name="AmbiencePlayer" type="AudioStreamPlayer" parent="." unique_id=1102980453]

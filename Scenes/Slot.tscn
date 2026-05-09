@@ -1,26 +1,63 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene format=3 uid="uid://8cpov72vuh2h"]
 
-[sub_resource type="Shortcut" id=7]
+[ext_resource type="Script" uid="uid://i6mqnp752160" path="res://Scenes/slot.gd" id="1_vqo0j"]
 
-[sub_resource type="StyleBoxFlat" id=8]
+[sub_resource type="Shortcut" id="7"]
+
+[sub_resource type="StyleBoxFlat" id="8"]
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color( 0.227451, 0.223529, 0.223529, 1 )
+border_color = Color(0.227451, 0.223529, 0.223529, 1)
 
-[node name="Slot" type="TextureButton"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6hjk3"]
+bg_color = Color(0.31135654, 0.31135657, 0.31135646, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[node name="Slot" type="TextureButton" unique_id=63629836]
+custom_minimum_size = Vector2(64, 64)
 offset_left = 108.0
 offset_right = 172.0
 offset_bottom = 64.0
-custom_minimum_size = Vector2( 64, 64 )
-shortcut = SubResource( 7 )
-expand = true
+size_flags_horizontal = 3
+size_flags_vertical = 3
+shortcut = SubResource("7")
+ignore_texture_size = true
 stretch_mode = 5
+script = ExtResource("1_vqo0j")
 
-[node name="Panel" type="Panel" parent="."]
-modulate = Color( 0.364706, 0.356863, 0.356863, 1 )
+[node name="Panel" type="Panel" parent="." unique_id=349229359]
+modulate = Color(0.364706, 0.356863, 0.356863, 1)
 show_behind_parent = true
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme_override_styles/panel = SubResource( 8 )
+theme_override_styles/panel = SubResource("8")
+
+[node name="Panel2" type="Panel" parent="." unique_id=60134361]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.3125
+anchor_bottom = 0.3125
+theme_override_styles/panel = SubResource("StyleBoxFlat_6hjk3")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel2" unique_id=1471821342]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

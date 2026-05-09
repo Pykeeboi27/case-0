@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://b87dqd42bcv3g"]
 
-[ext_resource type="Texture2D" uid="uid://h2ihfp5hwsxd" path="res://ItemTextures/rough_pine_door_4k.blend/textures/rough_pine_door_disp_4k.png" id="1_ktatf"]
-[ext_resource type="Texture2D" uid="uid://ch14wdpb651wy" path="res://ItemTextures/rough_pine_door_4k.blend/textures/rough_pine_door_diff_4k.jpg" id="2_783m3"]
+[ext_resource type="Texture2D" uid="uid://tkex35h8o76h" path="res://MansionThingsGodot/textures/rough_pine_door_disp_4k.png" id="1_ktatf"]
+[ext_resource type="Script" uid="uid://bd111fe7bysjt" path="res://Scripts/door.gd" id="1_optf5"]
+[ext_resource type="Texture2D" uid="uid://bcmyy7w8a65gc" path="res://MansionThingsGodot/textures/rough_pine_door_diff_4k.jpg" id="2_783m3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ktatf"]
 albedo_texture = ExtResource("2_783m3")
@@ -196,6 +197,7 @@ _data = {
 
 [node name="StaticBody3D" type="StaticBody3D" unique_id=1395263712]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+script = ExtResource("1_optf5")
 
 [node name="doorframe" type="MeshInstance3D" parent="." unique_id=1243809708]
 transform = Transform3D(0.15516698, 0, 0, 0, 4.001147, 0, 0, 0, 0.31695798, 1.076702, 0, 0)
@@ -233,3 +235,25 @@ mesh = SubResource("SphereMesh_t62mq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Door" unique_id=131881144]
 libraries/ = SubResource("AnimationLibrary_p6m50")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=385494971]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1809416176]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -124.0
+offset_right = 0.5
+offset_bottom = -101.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer" unique_id=388210541]
+layout_mode = 2
+
+[node name="Timer" type="Timer" parent="." unique_id=1858999299]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

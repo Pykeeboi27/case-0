@@ -3,13 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://dt0l6ncdi22vo" path="res://Scenes/Player.tscn" id="1"]
 [ext_resource type="Script" uid="uid://s8vo4rs2dwyl" path="res://Scripts/Test Platform.gd" id="2"]
 [ext_resource type="Script" uid="uid://cry8kpmwix7po" path="res://Scenes/CanvasLayer.gd" id="3"]
-[ext_resource type="PackedScene" path="res://Scenes/ItemPickup.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://Scenes/Slot.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://c6ybehnpemawc" path="res://Scenes/ItemPickup.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://8cpov72vuh2h" path="res://Scenes/Slot.tscn" id="5"]
 [ext_resource type="Script" uid="uid://cll2otth65qpg" path="res://Scenes/Hotbar.gd" id="6"]
 [ext_resource type="PackedScene" uid="uid://dcehrqkc7trce" path="res://Scenes/lowpolymansion/mansion.tscn" id="8_j0geh"]
 [ext_resource type="PackedScene" uid="uid://bf60hiaalidv7" path="res://MansionThingsGodot/Door.tscn" id="9_sbe5v"]
 [ext_resource type="Resource" uid="uid://d2bvnssv47j0l" path="res://Assets/items/flashlight.tres" id="10_2pgpu"]
 [ext_resource type="PackedScene" uid="uid://c6fty8n6j4cpv" path="res://Scenes/vii.tscn" id="10_wbnqu"]
+[ext_resource type="PackedScene" uid="uid://b87dqd42bcv3g" path="res://MansionThingsGodot/MansionDoor.tscn" id="11_wbnqu"]
+[ext_resource type="PackedScene" uid="uid://b77wpa7n66d1" path="res://MansionThingsGodot/Drawer.tscn" id="12_baf72"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sag1g"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -213,19 +215,15 @@ script = ExtResource("6")
 
 [node name="Slot" parent="CanvasLayer/Control/Hotbar" unique_id=1892835880 instance=ExtResource("5")]
 layout_mode = 2
-ignore_texture_size = true
 
 [node name="Slot2" parent="CanvasLayer/Control/Hotbar" unique_id=211817189 instance=ExtResource("5")]
 layout_mode = 2
-ignore_texture_size = true
 
 [node name="Slot3" parent="CanvasLayer/Control/Hotbar" unique_id=2002225718 instance=ExtResource("5")]
 layout_mode = 2
-ignore_texture_size = true
 
 [node name="Slot4" parent="CanvasLayer/Control/Hotbar" unique_id=102324360 instance=ExtResource("5")]
 layout_mode = 2
-ignore_texture_size = true
 
 [node name="ItemPickup2" parent="." unique_id=668058311 instance=ExtResource("4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.11299, 0.67555094, 2.09559)
@@ -261,5 +259,28 @@ target_door = "none"
 [node name="CharacterBody3D" parent="." unique_id=1422169282 instance=ExtResource("10_wbnqu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, -6)
 
-[node name="vii" parent="." unique_id=334072776 instance=ExtResource("10_wbnqu")]
+[node name="vii" parent="." unique_id=334072776 groups=["enemy"] instance=ExtResource("10_wbnqu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6861234, 6.5417924, -55.09136)
+
+[node name="StaticBody3D3" parent="." unique_id=1395263712 instance=ExtResource("11_wbnqu")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -0.5553856, 2.5005734, -15.3167925)
+required_item = "none"
+target_door = "none"
+
+[node name="Drawer" parent="." unique_id=912165849 instance=ExtResource("12_baf72")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5175519, 1.2374057, -9.603142)
+
+[node name="Drawer2" parent="." unique_id=546860882 instance=ExtResource("12_baf72")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.742167, 1.2374057, -9.603142)
+
+[node name="Drawer3" parent="." unique_id=626683855 instance=ExtResource("12_baf72")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8392353, 1.2374057, -9.615432)
+
+[node name="Drawer4" parent="." unique_id=1255300063 instance=ExtResource("12_baf72")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5274665, 1.2374057, -9.615432)
+
+[node name="Drawer5" parent="." unique_id=471941863 instance=ExtResource("12_baf72")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1342735, 1.2374057, -9.615432)
+
+[node name="Drawer6" parent="." unique_id=1372434543 instance=ExtResource("12_baf72")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1342735, 1.2374057, -8.304327)

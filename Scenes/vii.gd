@@ -74,6 +74,7 @@ func _chase() -> void:
 	if player == null:
 		state = State.ROAMING
 		return
+	
 
 	var dist := global_position.distance_to(player.global_position)
 

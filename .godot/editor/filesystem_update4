@@ -1,5 +1,10 @@
-res://MansionThingsGodot/Door.tscn
-res://Scenes/ItemPickup.tscn
-res://Scenes/ItemPickup.gd
-res://MansionThingsGodot/drawer.gd
+res://MansionThingsGodot/MansionDoor.tscn
+res://Scenes/Test Platform.tscn
 res://Scripts/door.gd
+res://MansionThingsGodot/Drawer.tscn
+res://MansionThingsGodot/drawer.gd
+res://Scenes/Player.tscn
+res://MansionThingsGodot/Door.tscn
+res://Scenes/Slot.tscn
+res://Scenes/slot.gd
+res://Scenes/Hotbar.gd
