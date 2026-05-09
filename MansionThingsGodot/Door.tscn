@@ -21,34 +21,6 @@ albedo_texture = ExtResource("2_8y1u2")
 albedo_color = Color(0.04702956, 0.047029573, 0.04702956, 1)
 albedo_texture = ExtResource("2_8y1u2")
 
-[sub_resource type="Animation" id="7"]
-resource_name = "Door_open"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0.024549197, 0, 0.056492638), Vector3(0.04983773, 0, 0.11039726), Vector3(0.09139388, 0, 0.14803433), Vector3(0.13960478, 0, 0.17901653), Vector3(0.19668913, 0, 0.20112556)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0.31415927, 0), Vector3(0, 0.62831855, 0), Vector3(0, 0.94247776, 0), Vector3(0, 1.2566371, 0), Vector3(0, 1.5707964, 0)]
-}
-
 [sub_resource type="Animation" id="8"]
 length = 0.001
 tracks/0/type = "value"
@@ -104,11 +76,39 @@ tracks/1/keys = {
 "values": [Vector3(0, 1.5707964, 0), Vector3(0, 1.2566371, 0), Vector3(0, 0.94247776, 0), Vector3(0, 0.62831855, 0), Vector3(0, 0.31415927, 0), Vector3(0, 0, 0)]
 }
 
+[sub_resource type="Animation" id="7"]
+resource_name = "door_open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.024549197, 0, 0.056492638), Vector3(0.04983773, 0, 0.11039726), Vector3(0.09139388, 0, 0.14803433), Vector3(0.13960478, 0, 0.17901653), Vector3(0.19668913, 0, 0.20112556)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.31415927, 0), Vector3(0, 0.62831855, 0), Vector3(0, 0.94247776, 0), Vector3(0, 1.2566371, 0), Vector3(0, 1.5707964, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6xaln"]
 _data = {
-&"Door_open": SubResource("7"),
 &"RESET": SubResource("8"),
-&"door_close": SubResource("Animation_1vvux")
+&"door_close": SubResource("Animation_1vvux"),
+&"door_open": SubResource("7")
 }
 
 [node name="StaticBody3D" type="StaticBody3D" unique_id=1011986274]
@@ -121,7 +121,6 @@ shape = SubResource("BoxShape3D_8y1u2")
 transform = Transform3D(0.39863208, 0, 0, 0, 0.797265, 0, 0, 0, 0.0399363, 0.00333503, 0, -0.000573039)
 material_override = SubResource("StandardMaterial3D_1vvux")
 mesh = SubResource("1")
-script = ExtResource("1_8y1u2")
 
 [node name="Handle" type="MeshInstance3D" parent="Door" unique_id=403470789]
 transform = Transform3D(0.10013699, 0, 0, 0, 0.0529763, 0, 0, 0, 1.07224, -0.3689509, -0.042814594, 0.9171193)
@@ -133,7 +132,7 @@ transform = Transform3D(0.10013699, 0, 0, 0, 0.0529763, 0, 0, 0, 1.07224, -0.371
 material_override = SubResource("StandardMaterial3D_cuixy")
 mesh = SubResource("3")
 
-[node name="Door" type="AnimationPlayer" parent="Door" unique_id=225782901]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Door" unique_id=225782901]
 libraries/ = SubResource("AnimationLibrary_6xaln")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1939855018]
