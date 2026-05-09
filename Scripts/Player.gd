@@ -1,5 +1,5 @@
 extends CharacterBody3D #physics
-@export var moveSpeed: float = 5.0
+@export var moveSpeed: float = 10.0
 @export var jumpForce: float = 10.0
 @export var gravity: float = 30.0
 
@@ -16,6 +16,12 @@ var pickedObject
 var objectPullPower: float = 4.0
 var current_item = null
 var item_target_use: String = "none"
+var footstepTimer: float = 0.0
+var footstepInterval: float = 0.25 
+var heartbeatRadius : float = 7.5 # enemy radius
+@export var ambience_sounds: Array[AudioStream] = []
+var ambienceTimer: float = 0.0
+var ambienceInterval: float = 0.0
 
 # --- HEAD BOB ---
 @export var bobFrequency: float = 20.0
@@ -32,6 +38,9 @@ var cameraDefaultPosition: Vector3
 @onready var hand = get_node("Camera3D/Hand")
 @onready var labeltext = $CanvasLayer/InteractContainer/InteractLabel
 @onready var itemhand = get_node("Camera3D/ItemHand")
+@onready var footstepPlayer = get_node("FootstepAudioPlayer") # footstep
+@onready var heartbeatPlayer = $HeartbeatPlayer # near enemy
+@onready var ambiencePlayer = $AmbiencePlayer # ambience
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -41,6 +50,7 @@ func _ready():
 	
 	cameraDefaultPosition = camera.position
 	Inventory.connect("slot_selected", Callable(self, "_on_slot_selected"))
+	_randomize_ambience_timer()
 
 func _input(event):
 	#mouse movement
@@ -92,7 +102,23 @@ func _physics_process(delta):
 	var right = global_transform.basis.x
 	velocity.z = (forward*input.y + right*input.x).z * moveSpeed
 	velocity.x = (forward*input.y + right*input.x).x * moveSpeed
-
+	
+	  # footsteps
+	var isWalking = input.length() > 0 and is_on_floor()
+	if isWalking:
+		footstepTimer -= delta
+		if footstepTimer <= 0.0:
+			footstepPlayer.play()
+			footstepTimer = footstepInterval
+	else:
+		footstepTimer = 0.0
+	
+	# when enemy is near
+	_check_heartbeat()
+	
+	# ambience wind noise
+	_check_ambience(delta)
+	
 	#apply gravity
 	velocity.y -= gravity * delta
 
@@ -174,3 +200,32 @@ func _on_slot_selected(index):
 		item_target_use = item.target_use
 		current_item.is_equipped = true
 		itemhand.add_child(current_item)
+		
+
+func _check_heartbeat() -> void:
+	var enemy = get_tree().get_first_node_in_group("enemy")
+	if enemy == null:
+		heartbeatPlayer.stop()
+		return
+	var dist = global_position.distance_to(enemy.global_position)
+	if dist <= heartbeatRadius:
+		if not heartbeatPlayer.playing:
+			heartbeatPlayer.play()
+	else:
+		heartbeatPlayer.stop()
+
+func _check_ambience(delta: float) -> void:
+	ambienceTimer -= delta
+	if ambienceTimer <= 0.0:
+		_play_random_ambience()
+		_randomize_ambience_timer()
+
+func _play_random_ambience() -> void:
+	if ambience_sounds.size() == 0:
+		return
+	var random_sound = ambience_sounds[randi() % ambience_sounds.size()]
+	ambiencePlayer.stream = random_sound
+	ambiencePlayer.play()
+
+func _randomize_ambience_timer() -> void:
+	ambienceTimer = randf_range(5.0, 20.0)

@@ -261,5 +261,5 @@ target_door = "none"
 [node name="CharacterBody3D" parent="." unique_id=1422169282 instance=ExtResource("10_wbnqu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, -6)
 
-[node name="vii" parent="." unique_id=334072776 instance=ExtResource("10_wbnqu")]
+[node name="vii" parent="." unique_id=334072776 groups=["enemy"] instance=ExtResource("10_wbnqu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6861234, 6.5417924, -55.09136)
