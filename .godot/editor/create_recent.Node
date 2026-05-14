@@ -1,10 +1,11 @@
+AnimationTree
+CharacterBody3D
+CollisionShape3D
+MeshInstance3D
 AudioStreamPlayer
 AudioStreamPlayer3D
 NavigationRegion3D
-MeshInstance3D
 NavigationAgent3D
-CollisionShape3D
-CharacterBody3D
 Area3D
 AnimationPlayer
 NavigationLink3D
