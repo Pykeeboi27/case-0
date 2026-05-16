@@ -1,14 +1,18 @@
+<<<<<<< HEAD
 Label
 Panel
+=======
+AnimationTree
+CharacterBody3D
+CollisionShape3D
+MeshInstance3D
+>>>>>>> f827fea6bed71ae91be965c9ec2cc19683f2b646
 AudioStreamPlayer
 Node3D
 StaticBody3D
 AudioStreamPlayer3D
 NavigationRegion3D
-MeshInstance3D
 NavigationAgent3D
-CollisionShape3D
-CharacterBody3D
 Area3D
 AnimationPlayer
 NavigationLink3D
