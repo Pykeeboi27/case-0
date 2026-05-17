@@ -8,9 +8,18 @@
 [ext_resource type="AudioStream" uid="uid://dotlr6dxygjm6" path="res://Audio/Player/monster-sound-effect (1).mp3" id="4_yoq75"]
 [ext_resource type="AudioStream" uid="uid://dv4ofxpcwvxx3" path="res://Audio/Player/kids-screaming-lowered.mp3" id="5_bhhdu"]
 [ext_resource type="AudioStream" uid="uid://c3qwifl32ibsr" path="res://Audio/Player/WindCreaking.mp3" id="5_ksbbd"]
+[ext_resource type="AudioStream" path="res://Audio/Player/slashed.mp3" id="6_hit"]
+[ext_resource type="AudioStream" path="res://Audio/Player/death-sound.mp3" id="7_death"]
+[ext_resource type="PackedScene" path="res://Scenes/DeathScreen.tscn" id="8_ds"]
 
 [sub_resource type="CapsuleShape3D" id="1"]
 height = 2.760376
+
+[sub_resource type="StyleBoxFlat" id="hb_bg"]
+bg_color = Color(0.08, 0.08, 0.08, 0.7)
+
+[sub_resource type="StyleBoxFlat" id="hb_fill"]
+bg_color = Color(0.75, 0.1, 0.1, 1)
 
 [node name="Player" type="CharacterBody3D" unique_id=2134098255 groups=["player"]]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
@@ -67,6 +76,27 @@ offset_bottom = 20.0
 layout_mode = 2
 text = "Press \"E\" To Interact"
 
+[node name="HealthBar" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 274.0
+offset_bottom = 50.0
+theme_override_styles/background = SubResource("hb_bg")
+theme_override_styles/fill = SubResource("hb_fill")
+max_value = 100.0
+value = 100.0
+show_percentage = false
+
+[node name="DamageFlash" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0.6, 0, 0, 0)
+
+[node name="DeathScreen" parent="." instance=ExtResource("8_ds")]
+visible = false
+
 [node name="FootstepAudioPlayer" type="AudioStreamPlayer3D" parent="." unique_id=2082461989]
 stream = ExtResource("3_gntrk")
 
@@ -75,3 +105,9 @@ stream = ExtResource("4_dewec")
 volume_db = 20.0
 
 [node name="AmbiencePlayer" type="AudioStreamPlayer" parent="." unique_id=1102980453]
+
+[node name="HitPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_hit")
+
+[node name="DeathSoundPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_death")

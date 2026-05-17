@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bf60hiaalidv7" path="res://MansionThingsGodot/Door.tscn" id="9_sbe5v"]
 [ext_resource type="Resource" uid="uid://d2bvnssv47j0l" path="res://Assets/items/flashlight.tres" id="10_2pgpu"]
 [ext_resource type="PackedScene" uid="uid://c6fty8n6j4cpv" path="res://Scenes/vii.tscn" id="10_wbnqu"]
+[ext_resource type="Resource" path="res://Assets/items/wand.tres" id="11_wand"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sag1g"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -239,6 +240,10 @@ item_data = ExtResource("10_2pgpu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.17746, 0.67555094, 0.629415)
 item_data = ExtResource("10_2pgpu")
 
+[node name="ItemPickupWand" parent="." instance=ExtResource("4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.67555094, 2.0)
+item_data = ExtResource("11_wand")
+
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1074520407]
 navigation_mesh = SubResource("NavigationMesh_baf72")
 
@@ -262,4 +267,4 @@ target_door = "none"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, -6)
 
 [node name="vii" parent="." unique_id=334072776 groups=["enemy"] instance=ExtResource("10_wbnqu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6861234, 6.5417924, -55.09136)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6861234, 5.869802, -55.09136)

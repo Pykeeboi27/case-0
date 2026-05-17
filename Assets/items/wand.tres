@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/Wand.tscn" id="1_wand"]
+[ext_resource type="Script" path="res://ItemData.gd" id="2_itemdata"]
+
+[resource]
+script = ExtResource("2_itemdata")
+item_name = "wand_desisto"
+mesh_scene = ExtResource("1_wand")
+item_type = "spell"
+target_use = "wand"
