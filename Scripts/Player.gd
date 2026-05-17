@@ -3,6 +3,11 @@ extends CharacterBody3D #physics
 @export var jumpForce: float = 10.0
 @export var gravity: float = 30.0
 
+#health
+@export var max_health: float = 100.0
+var current_health: float = 100.0
+var dead: bool = false
+
 #camera look
 var minLookAngle: float = -90.0
 var maxLookAngle: float = 90.0
@@ -41,6 +46,11 @@ var cameraDefaultPosition: Vector3
 @onready var footstepPlayer = get_node("FootstepAudioPlayer") # footstep
 @onready var heartbeatPlayer = $HeartbeatPlayer # near enemy
 @onready var ambiencePlayer = $AmbiencePlayer # ambience
+@onready var healthBar = $CanvasLayer/HealthBar
+@onready var damageFlash = $CanvasLayer/DamageFlash
+@onready var deathScreen = $DeathScreen
+@onready var hitPlayer = $HitPlayer
+@onready var deathSoundPlayer = $DeathSoundPlayer
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -52,7 +62,14 @@ func _ready():
 	Inventory.connect("slot_selected", Callable(self, "_on_slot_selected"))
 	_randomize_ambience_timer()
 
+	current_health = max_health
+	healthBar.max_value = max_health
+	healthBar.value = current_health
+	deathScreen.visible = false
+
 func _input(event):
+	if dead:
+		return
 	#mouse movement
 	if event is InputEventMouseMotion:
 		mouseDelta = event.relative
@@ -68,6 +85,13 @@ func _input(event):
 	
 
 func _process(delta):
+	# damage flash fades back out
+	if damageFlash.color.a > 0.0:
+		damageFlash.color.a = max(damageFlash.color.a - delta * 1.5, 0.0)
+
+	if dead:
+		return
+
 	#rotate camera along x-axis
 	camera.rotation_degrees -= Vector3(rad_to_deg(mouseDelta.y),0,0)*lookSensitivity*delta
 	#clamp the vertical camera rotation
@@ -78,6 +102,8 @@ func _process(delta):
 	mouseDelta = Vector2()
 
 func _physics_process(delta):
+	if dead:
+		return
 	#reset the x and z velocity
 	velocity.x = 0
 	velocity.z = 0
@@ -200,7 +226,23 @@ func _on_slot_selected(index):
 		item_target_use = item.target_use
 		current_item.is_equipped = true
 		itemhand.add_child(current_item)
-		
+
+func take_damage(amount: float) -> void:
+	if dead:
+		return
+	current_health = max(current_health - amount, 0.0)
+	healthBar.value = current_health
+	damageFlash.color.a = 0.45
+	hitPlayer.play()
+	if current_health <= 0.0:
+		die()
+
+func die() -> void:
+	dead = true
+	deathSoundPlayer.play()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	deathScreen.visible = true
+
 
 func _check_heartbeat() -> void:
 	var enemy = get_tree().get_first_node_in_group("enemy")
