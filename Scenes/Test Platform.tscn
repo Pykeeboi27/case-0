@@ -10,12 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://bf60hiaalidv7" path="res://MansionThingsGodot/Door.tscn" id="9_sbe5v"]
 [ext_resource type="Resource" uid="uid://d2bvnssv47j0l" path="res://Assets/items/flashlight.tres" id="10_2pgpu"]
 [ext_resource type="PackedScene" uid="uid://c6fty8n6j4cpv" path="res://Scenes/vii.tscn" id="10_wbnqu"]
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://b87dqd42bcv3g" path="res://MansionThingsGodot/MansionDoor.tscn" id="11_wbnqu"]
 [ext_resource type="PackedScene" uid="uid://b77wpa7n66d1" path="res://MansionThingsGodot/Drawer.tscn" id="12_baf72"]
-=======
 [ext_resource type="Resource" path="res://Assets/items/wand.tres" id="11_wand"]
->>>>>>> vii
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sag1g"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -268,8 +265,7 @@ target_door = "none"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, -6)
 
 [node name="vii" parent="." unique_id=334072776 groups=["enemy"] instance=ExtResource("10_wbnqu")]
-<<<<<<< HEAD
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6861234, 6.5417924, -55.09136)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6861234, 5.869802, -55.09136)
 
 [node name="StaticBody3D3" parent="." unique_id=1395263712 instance=ExtResource("11_wbnqu")]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -0.5553856, 2.5005734, -15.3167925)
@@ -293,6 +289,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1342735, 1.2374057, -9.6154
 
 [node name="Drawer6" parent="." unique_id=1372434543 instance=ExtResource("12_baf72")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1342735, 1.2374057, -8.304327)
-=======
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6861234, 5.869802, -55.09136)
->>>>>>> vii
