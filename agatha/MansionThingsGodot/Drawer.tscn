@@ -1,0 +1,206 @@
+[gd_scene format=3 uid="uid://b77wpa7n66d1"]
+
+[ext_resource type="Texture2D" uid="uid://vodviagco7r2" path="res://MansionThingsGodot/textures/stained_pine_diff_4k.jpg" id="1_wqdca"]
+[ext_resource type="Script" uid="uid://l6pju8hituq4" path="res://MansionThingsGodot/drawer.gd" id="2_qhx8t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s2l0f"]
+albedo_color = Color(0.25219148, 0.21126282, 0.19337288, 1)
+metallic = 1.0
+
+[sub_resource type="BoxMesh" id="1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s2l0f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wqdca"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t75ll"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a3o1h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mbp2c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t75ll"]
+albedo_texture = ExtResource("1_wqdca")
+metallic = 1.0
+
+[sub_resource type="BoxMesh" id="12"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wqdca"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
+
+[sub_resource type="BoxMesh" id="14"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qtvmw"]
+
+[sub_resource type="Animation" id="Animation_wqdca"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LeftDoor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.017055511, 0.004317899, 0.24347177)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LeftDoor:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_a3o1h"]
+resource_name = "drawer_close"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LeftDoor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.268, 0.004, 0.501), Vector3(0.18846054, 0.0040635797, 0.48754054), Vector3(0.118282765, 0.0041271597, 0.4505525), Vector3(0.06429852, 0.0041907397, 0.39454135), Vector3(0.02650776, 0.0042543192, 0.32401264), Vector3(0.017055511, 0.004317899, 0.24347177)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LeftDoor:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 3.138102, 0), Vector3(0, 2.824641, 0), Vector3(0, 2.51118, 0), Vector3(0, 2.1977186, 0), Vector3(0, 1.8842576, 0), Vector3(0, 1.5707964, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_t75ll"]
+resource_name = "drawer_open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LeftDoor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.017055511, 0.004317899, 0.24347177), Vector3(0.027622104, 0.0043178992, 0.3242668), Vector3(0.0644997, 0.0043178992, 0.39524862), Vector3(0.1176318, 0.0043178992, 0.45101675), Vector3(0.19052002, 0.0043178992, 0.4880456), Vector3(0.26810846, 0.0043178992, 0.5006237)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LeftDoor:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, 0), Vector3(0, 1.8843307, 0), Vector3(0, 2.1978652, 0), Vector3(0, 2.5113997, 0), Vector3(0, 2.824934, 0), Vector3(0, 3.1384685, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a3o1h"]
+_data = {
+&"RESET": SubResource("Animation_wqdca"),
+&"drawer_close": SubResource("Animation_a3o1h"),
+&"drawer_open": SubResource("Animation_t75ll")
+}
+
+[node name="Drawer" type="Node3D" unique_id=912165849]
+
+[node name="Body" type="Node3D" parent="." unique_id=1360050461]
+
+[node name="Left" type="MeshInstance3D" parent="Body" unique_id=762725526]
+transform = Transform3D(0.03, 0, 0, 0, 0.3, 0, 0, 0, 0.5, -0.21881169, 0, -0.0030858815)
+material_override = SubResource("StandardMaterial3D_s2l0f")
+mesh = SubResource("1")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Body/Left" unique_id=1732055342]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Body/Left/StaticBody3D" unique_id=304390706]
+shape = SubResource("BoxShape3D_s2l0f")
+
+[node name="Right" type="MeshInstance3D" parent="Body" unique_id=2001698464]
+transform = Transform3D(0.03, 0, 0, 0, 0.3, 0, 0, 0, 0.5, 0.25167274, 0, -0.0047079027)
+material_override = SubResource("StandardMaterial3D_s2l0f")
+mesh = SubResource("1")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Body/Right" unique_id=1053670495]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Body/Right/StaticBody3D" unique_id=937308887]
+shape = SubResource("BoxShape3D_wqdca")
+
+[node name="Back" type="MeshInstance3D" parent="Body" unique_id=1235402936]
+transform = Transform3D(-1.3014999e-09, 0, 0.49624696, 0, 0.3, 0, -0.03, 0, -2.18557e-08, 0.013035029, 0, -0.23913106)
+material_override = SubResource("StandardMaterial3D_s2l0f")
+mesh = SubResource("1")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Body/Back" unique_id=1890332024]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Body/Back/StaticBody3D" unique_id=1821792659]
+shape = SubResource("BoxShape3D_t75ll")
+
+[node name="Bottom" type="MeshInstance3D" parent="Body" unique_id=1470861210]
+transform = Transform3D(5.73206e-17, 1.31134e-08, 0.5, 0.03, -1.31134e-08, 0, 2.18096e-09, 0.498946, -3.63494e-08, 0.018226027, -0.1340995, -0.0024178922)
+material_override = SubResource("StandardMaterial3D_s2l0f")
+mesh = SubResource("1")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Body/Bottom" unique_id=1117285414]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Body/Bottom/StaticBody3D" unique_id=857476818]
+shape = SubResource("BoxShape3D_a3o1h")
+
+[node name="Top" type="MeshInstance3D" parent="Body" unique_id=1450266324]
+transform = Transform3D(5.73206e-17, 1.31134e-08, 0.5, 0.03, -1.31134e-08, 0, 2.18096e-09, 0.498946, -3.63494e-08, 0.018226027, 0.13528672, -0.0024178922)
+material_override = SubResource("StandardMaterial3D_s2l0f")
+mesh = SubResource("1")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Body/Top" unique_id=620691954]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Body/Top/StaticBody3D" unique_id=1318042404]
+shape = SubResource("BoxShape3D_mbp2c")
+
+[node name="DrawerDoor" type="Node3D" parent="." unique_id=121275172]
+transform = Transform3D(0.98925334, 0, 0, 0, 0.9970825, 0, 0, 0, 1, 0, -0.0030067265, 0)
+
+[node name="LeftDoor" type="MeshInstance3D" parent="DrawerDoor" unique_id=622978531]
+transform = Transform3D(-3.343916e-10, 0, 0.5118639, 0, 0.30176154, 0, -0.007649988, 0, -2.2374282e-08, 0.017055511, 0.004317899, 0.24347177)
+material_override = SubResource("StandardMaterial3D_t75ll")
+mesh = SubResource("12")
+script = ExtResource("2_qhx8t")
+
+[node name="Handle" type="MeshInstance3D" parent="DrawerDoor/LeftDoor" unique_id=1197768439]
+transform = Transform3D(4.04002e-06, -3.14452, 8.24707e-07, 0, -6.92334e-10, -0.0950325, 0.0460865, -2.3606108e-09, 6.1911205e-16, -0.41534424, -0.0100151, -0.32313824)
+material_override = SubResource("StandardMaterial3D_wqdca")
+mesh = SubResource("14")
+skeleton = NodePath("../..")
+
+[node name="Area3D" type="Area3D" parent="DrawerDoor/LeftDoor" unique_id=707564963]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DrawerDoor/LeftDoor/Area3D" unique_id=1431085244]
+shape = SubResource("BoxShape3D_qtvmw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DrawerDoor" unique_id=1761557125]
+libraries/ = SubResource("AnimationLibrary_a3o1h")

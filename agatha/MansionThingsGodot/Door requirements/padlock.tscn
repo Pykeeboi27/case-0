@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c8ienlu5ly6x7"]
+
+[ext_resource type="ArrayMesh" uid="uid://b3o68frq70cf1" path="res://MansionThingsGodot/Door requirements/21932_Pad_Lock_v1_NEW.obj" id="1_ijqn2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dnwnx"]
+albedo_color = Color(0.16062862, 0.16062862, 0.16062862, 1)
+
+[node name="Padlock" type="MeshInstance3D" unique_id=1460419575]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_dnwnx")
+mesh = ExtResource("1_ijqn2")

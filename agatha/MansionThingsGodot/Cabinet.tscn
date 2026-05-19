@@ -1,0 +1,508 @@
+[gd_scene format=3 uid="uid://do5ly505boei6"]
+
+[ext_resource type="Texture2D" uid="uid://vodviagco7r2" path="res://MansionThingsGodot/textures/stained_pine_diff_4k.jpg" id="1_63kkc"]
+[ext_resource type="Texture2D" uid="uid://mvmfh4xdkb1t" path="res://MansionThingsGodot/textures/stained_pine_disp_4k.png" id="2_q2bme"]
+
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8hpl2"]
+albedo_color = Color(0.78377444, 0.39177302, 0.24719223, 1)
+albedo_texture = ExtResource("1_63kkc")
+
+[sub_resource type="BoxMesh" id="1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j8fs6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mr8lh"]
+albedo_color = Color(0.9693627, 0.73112994, 0.66833836, 1)
+albedo_texture = ExtResource("2_q2bme")
+
+[sub_resource type="BoxMesh" id="4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3srqu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_63kkc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2xqx0"]
+albedo_color = Color(0.38540995, 0.083636515, 0.12956971, 1)
+
+[sub_resource type="SphereMesh" id="11"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3srqu"]
+
+[sub_resource type="Animation" id="Animation_j8fs6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.017431661, 0.8086779, 0.20670642)]
+}
+
+[sub_resource type="Animation" id="Animation_63kkc"]
+resource_name = "cabinet_close"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.017, 0.809, 0.67), Vector3(0.017, 0.809, 0.207)]
+}
+
+[sub_resource type="Animation" id="Animation_3srqu"]
+resource_name = "cabinet_open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.017431661, 0.8086779, 0.20670642), Vector3(0.017431661, 0.8086779, 0.6703471)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_63kkc"]
+_data = {
+&"RESET": SubResource("Animation_j8fs6"),
+&"cabinet_close": SubResource("Animation_63kkc"),
+&"cabinet_open": SubResource("Animation_3srqu")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q2bme"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8hpl2"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_j8fs6"]
+
+[sub_resource type="Animation" id="Animation_q2bme"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.019989235, 0.54233, 0.20941284)]
+}
+
+[sub_resource type="Animation" id="Animation_mr8lh"]
+resource_name = "cabinet_close"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.02, 0.542, 0.67), Vector3(0.02, 0.542, 0.209)]
+}
+
+[sub_resource type="Animation" id="Animation_8hpl2"]
+resource_name = "cabinet_open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.019989235, 0.54233, 0.20941284), Vector3(0.02, 0.542, 0.67)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mr8lh"]
+_data = {
+&"RESET": SubResource("Animation_q2bme"),
+&"cabinet_close": SubResource("Animation_mr8lh"),
+&"cabinet_open": SubResource("Animation_8hpl2")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mr8lh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2xqx0"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0iyc5"]
+
+[sub_resource type="Animation" id="Animation_2xqx0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.019989235, 0.2728701, 0.2029175)]
+}
+
+[sub_resource type="Animation" id="Animation_0iyc5"]
+resource_name = "cabinet_close"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.02, 0.273, 0.67), Vector3(0.02, 0.273, 0.203)]
+}
+
+[sub_resource type="Animation" id="Animation_6xrc3"]
+resource_name = "cabinet_open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.019989235, 0.2728701, 0.2029175), Vector3(0.02, 0.273, 0.67)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m7gnf"]
+_data = {
+&"RESET": SubResource("Animation_2xqx0"),
+&"cabinet_close": SubResource("Animation_0iyc5"),
+&"cabinet_open": SubResource("Animation_6xrc3")
+}
+
+[node name="Cabinet" type="Node3D" unique_id=1108154700]
+transform = Transform3D(0.5636, 0, 0, 0, 0.708563, 0, 0, 0, 0.625056, 0, 0, 0)
+
+[node name="Body" type="Node3D" parent="." unique_id=754404322]
+
+[node name="Back" type="MeshInstance3D" parent="Body" unique_id=54389217]
+transform = Transform3D(1.0976, 0, 0, 0, 0.8712679, 0, 0, 0, 0.109353, 0.0036968417, 0.66321987, -0.40858522)
+material_override = SubResource("StandardMaterial3D_8hpl2")
+mesh = SubResource("1")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Body/Back" unique_id=1097957404]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Body/Back/StaticBody3D" unique_id=212379553]
+shape = SubResource("BoxShape3D_j8fs6")
+
+[node name="Left" type="MeshInstance3D" parent="Body" unique_id=1350517761]
+transform = Transform3D(-3.7364405e-08, 0, 0.109353, 0, 0.8712679, 0, -0.85479796, 0, -4.7799715e-09, -0.49026385, 0.66321987, 0.06921128)
+material_override = SubResource("StandardMaterial3D_8hpl2")
+mesh = SubResource("1")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Body/Left" unique_id=75368079]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Body/Left/StaticBody3D" unique_id=173315386]
+shape = SubResource("BoxShape3D_j8fs6")
+
+[node name="Right" type="MeshInstance3D" parent="Body" unique_id=466999683]
+transform = Transform3D(-3.7364405e-08, 0, 0.109353, 0, 0.8712679, 0, -0.85479796, 0, -4.7799715e-09, 0.49998286, 0.66321987, 0.07344846)
+material_override = SubResource("StandardMaterial3D_8hpl2")
+mesh = SubResource("1")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Body/Right" unique_id=703102049]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Body/Right/StaticBody3D" unique_id=1836963244]
+shape = SubResource("BoxShape3D_j8fs6")
+
+[node name="Top" type="MeshInstance3D" parent="Body" unique_id=1768259133]
+transform = Transform3D(1.06604, 0, 0, 0, -4.0792756e-08, -0.026860796, 0, 0.9332297, -1.1741225e-09, -0.011819084, 1.027926, 0.028637458)
+material_override = SubResource("StandardMaterial3D_8hpl2")
+mesh = SubResource("1")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Body/Top" unique_id=1035607090]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Body/Top/StaticBody3D" unique_id=238342602]
+shape = SubResource("BoxShape3D_j8fs6")
+
+[node name="Top2" type="MeshInstance3D" parent="Body" unique_id=1251852253]
+transform = Transform3D(1.06604, 0, 0, 0, -3.5933592e-08, -0.026860796, 0, 0.8220649, -1.1741225e-09, -0.00037353372, 0.7713158, 0.07775382)
+material_override = SubResource("StandardMaterial3D_8hpl2")
+mesh = SubResource("1")
+skeleton = NodePath("../..")
+
+[node name="Top3" type="MeshInstance3D" parent="Body" unique_id=71406526]
+transform = Transform3D(1.06604, 0, 0, 0, -3.5933592e-08, -0.026860796, 0, 0.8220649, -1.1741225e-09, -0.011819084, 0.5058965, 0.07775382)
+material_override = SubResource("StandardMaterial3D_8hpl2")
+mesh = SubResource("1")
+skeleton = NodePath("../..")
+
+[node name="Top4" type="MeshInstance3D" parent="Body" unique_id=696243552]
+transform = Transform3D(1.06604, 0, 0, 0, -3.5933592e-08, -0.026860796, 0, 0.8220649, -1.1741225e-09, -0.011819084, 0.23850176, 0.07775382)
+material_override = SubResource("StandardMaterial3D_8hpl2")
+mesh = SubResource("1")
+skeleton = NodePath("../..")
+
+[node name="Leg" type="MeshInstance3D" parent="Body" unique_id=1855214238]
+transform = Transform3D(0.07808379, 0, 0, 0, 0.26355287, 0, 0, 0, 0.0865284, -0.49204087, 0.13692328, -0.40655088)
+material_override = SubResource("StandardMaterial3D_8hpl2")
+mesh = SubResource("1")
+skeleton = NodePath("../..")
+
+[node name="Leg2" type="MeshInstance3D" parent="Body" unique_id=371377177]
+transform = Transform3D(0.07808379, 0, 0, 0, 0.26355287, 0, 0, 0, 0.0865284, 0.5022529, 0.13692328, -0.40655088)
+material_override = SubResource("StandardMaterial3D_8hpl2")
+mesh = SubResource("1")
+skeleton = NodePath("../..")
+
+[node name="Leg3" type="MeshInstance3D" parent="Body" unique_id=2029077711]
+transform = Transform3D(0.07808379, 0, 0, 0, 0.26355287, 0, 0, 0, 0.0865284, 0.50270486, 0.13853247, 0.45600653)
+material_override = SubResource("StandardMaterial3D_8hpl2")
+mesh = SubResource("1")
+skeleton = NodePath("../..")
+
+[node name="Leg4" type="MeshInstance3D" parent="Body" unique_id=498465511]
+transform = Transform3D(0.07808379, 0, 0, 0, 0.26355287, 0, 0, 0, 0.0865284, -0.49673986, 0.13853247, 0.45600653)
+material_override = SubResource("StandardMaterial3D_8hpl2")
+mesh = SubResource("1")
+skeleton = NodePath("../..")
+
+[node name="Drawer1" type="Node3D" parent="." unique_id=1784824801]
+transform = Transform3D(0.9999989, 0, 0, 0, 0.99999887, 0, 0, 0, 0.9999999, 0.017431661, 0.8086779, 0.20670642)
+
+[node name="Base" type="MeshInstance3D" parent="Drawer1" unique_id=680248844]
+transform = Transform3D(0.867675, 0, 0, 0, -9.23485e-09, -0.0134874005, 0, 0.70257705, -1.9605702e-09, -0.008324623, -0.010925531, -0.04276085)
+material_override = SubResource("StandardMaterial3D_mr8lh")
+mesh = SubResource("4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Drawer1/Base" unique_id=976224347]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer1/Base/StaticBody3D" unique_id=686959549]
+shape = SubResource("BoxShape3D_3srqu")
+
+[node name="Back" type="MeshInstance3D" parent="Drawer1" unique_id=810303556]
+transform = Transform3D(0.867675, 0, 0, 0, 0.21126902, 0, 0, 0, 0.0134874005, -0.008324623, 0.09678888, -0.38285834)
+material_override = SubResource("StandardMaterial3D_mr8lh")
+mesh = SubResource("4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Drawer1/Back" unique_id=670625038]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer1/Back/StaticBody3D" unique_id=59666132]
+shape = SubResource("BoxShape3D_3srqu")
+
+[node name="Front" type="MeshInstance3D" parent="Drawer1" unique_id=40362346]
+transform = Transform3D(0.867675, 0, 0, 0, 0.21928144, 0, 0, 0, 0.013487401, -0.008324683, 0.0929178, 0.31432092)
+material_override = SubResource("StandardMaterial3D_mr8lh")
+mesh = SubResource("4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Drawer1/Front" unique_id=235927136]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer1/Front/StaticBody3D" unique_id=1362659202]
+shape = SubResource("BoxShape3D_3srqu")
+
+[node name="Area3D" type="Area3D" parent="Drawer1/Front" unique_id=399235919]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer1/Front/Area3D" unique_id=453825833]
+shape = SubResource("BoxShape3D_63kkc")
+
+[node name="Left" type="MeshInstance3D" parent="Drawer1" unique_id=1118256403]
+transform = Transform3D(-3.79273e-08, 0, 0.0134874, 0, 0.21126904, 0, -0.7114641, 0, -4.834141e-10, -0.4356867, 0.09678888, -0.038117647)
+material_override = SubResource("StandardMaterial3D_mr8lh")
+mesh = SubResource("4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Drawer1/Left" unique_id=1277266854]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer1/Left/StaticBody3D" unique_id=354218603]
+shape = SubResource("BoxShape3D_3srqu")
+
+[node name="Right" type="MeshInstance3D" parent="Drawer1" unique_id=1821393398]
+transform = Transform3D(-3.79273e-08, 0, 0.0134874, 0, 0.21126902, 0, -0.71146405, 0, -4.8341403e-10, 0.42283988, 0.09678888, -0.038117647)
+material_override = SubResource("StandardMaterial3D_mr8lh")
+mesh = SubResource("4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Drawer1/Right" unique_id=24877409]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer1/Right/StaticBody3D" unique_id=464074607]
+shape = SubResource("BoxShape3D_3srqu")
+
+[node name="Button" type="MeshInstance3D" parent="Drawer1" unique_id=977576234]
+transform = Transform3D(0.17244498, 0, 0, 0, 0.08907441, 0, 0, 0, 0.069771, 0.016022801, 0.080702186, 0.33575368)
+material_override = SubResource("StandardMaterial3D_2xqx0")
+mesh = SubResource("11")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Drawer1/Button" unique_id=2069633258]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer1/Button/StaticBody3D" unique_id=592299296]
+shape = SubResource("SphereShape3D_3srqu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Drawer1" unique_id=269268673]
+libraries/ = SubResource("AnimationLibrary_63kkc")
+
+[node name="Drawer2" type="Node3D" parent="." unique_id=591242280]
+transform = Transform3D(0.9999989, 0, 0, 0, 0.99999887, 0, 0, 0, 0.9999999, 0.019989235, 0.54233, 0.20941284)
+
+[node name="Base" type="MeshInstance3D" parent="Drawer2" unique_id=1363372495]
+transform = Transform3D(0.867675, 0, 0, 0, -9.23485e-09, -0.013487401, 0, 0.7025771, -1.9605704e-09, -0.0083248615, -0.0054705143, -0.04276085)
+material_override = SubResource("StandardMaterial3D_mr8lh")
+mesh = SubResource("4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Drawer2/Base" unique_id=1159947015]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer2/Base/StaticBody3D" unique_id=638948737]
+shape = SubResource("BoxShape3D_q2bme")
+
+[node name="Back" type="MeshInstance3D" parent="Drawer2" unique_id=1766065232]
+transform = Transform3D(0.867675, 0, 0, 0, 0.21126904, 0, 0, 0, 0.013487401, -0.0083248615, 0.09678894, -0.39005053)
+material_override = SubResource("StandardMaterial3D_mr8lh")
+mesh = SubResource("4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Drawer2/Back" unique_id=1115668032]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer2/Back/StaticBody3D" unique_id=1586890004]
+shape = SubResource("BoxShape3D_q2bme")
+
+[node name="Front" type="MeshInstance3D" parent="Drawer2" unique_id=1301088268]
+transform = Transform3D(0.867675, 0, 0, 0, 0.21635257, 0, 0, 0, 0.013487401, -0.0083248615, 0.09589845, 0.3103267)
+material_override = SubResource("StandardMaterial3D_mr8lh")
+mesh = SubResource("4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Drawer2/Front" unique_id=1136607328]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer2/Front/StaticBody3D" unique_id=1360913710]
+shape = SubResource("BoxShape3D_q2bme")
+
+[node name="Area3D" type="Area3D" parent="Drawer2/Front" unique_id=1545887014]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer2/Front/Area3D" unique_id=2027939890]
+shape = SubResource("BoxShape3D_8hpl2")
+
+[node name="Left" type="MeshInstance3D" parent="Drawer2" unique_id=1498840104]
+transform = Transform3D(-3.79273e-08, 0, 0.0134874, 0, 0.21126902, 0, -0.71146405, 0, -4.8341403e-10, -0.43730593, 0.09678894, -0.03811741)
+material_override = SubResource("StandardMaterial3D_mr8lh")
+mesh = SubResource("4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Drawer2/Left" unique_id=1421823611]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer2/Left/StaticBody3D" unique_id=1637784624]
+shape = SubResource("BoxShape3D_q2bme")
+
+[node name="Right" type="MeshInstance3D" parent="Drawer2" unique_id=334943370]
+transform = Transform3D(-3.79273e-08, 0, 0.0134874, 0, 0.21126902, 0, -0.71146405, 0, -4.8341403e-10, 0.4187193, 0.09678894, -0.03811741)
+material_override = SubResource("StandardMaterial3D_mr8lh")
+mesh = SubResource("4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Drawer2/Right" unique_id=734859956]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer2/Right/StaticBody3D" unique_id=63672040]
+shape = SubResource("BoxShape3D_q2bme")
+
+[node name="Button" type="MeshInstance3D" parent="Drawer2" unique_id=353867189]
+transform = Transform3D(0.17244498, 0, 0, 0, 0.08907441, 0, 0, 0, 0.069771, 0.016022742, 0.080702424, 0.32427514)
+material_override = SubResource("StandardMaterial3D_2xqx0")
+mesh = SubResource("11")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Drawer2/Button" unique_id=2027522101]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer2/Button/StaticBody3D" unique_id=1557273039]
+shape = SubResource("SphereShape3D_j8fs6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Drawer2" unique_id=748252159]
+libraries/ = SubResource("AnimationLibrary_mr8lh")
+
+[node name="Drawer3" type="Node3D" parent="." unique_id=210229097]
+transform = Transform3D(0.9999989, 0, 0, 0, 0.99999887, 0, 0, 0, 0.9999999, 0.019989235, 0.2728701, 0.2029175)
+
+[node name="Base" type="MeshInstance3D" parent="Drawer3" unique_id=1809683813]
+transform = Transform3D(0.867675, 0, 0, 0, -9.23485e-09, -0.013487401, 0, 0.7025772, -1.9605704e-09, -0.008324683, 1.770258e-05, -0.03742075)
+material_override = SubResource("StandardMaterial3D_mr8lh")
+mesh = SubResource("4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Drawer3/Base" unique_id=2109807429]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer3/Base/StaticBody3D" unique_id=565942755]
+shape = SubResource("BoxShape3D_mr8lh")
+
+[node name="Back" type="MeshInstance3D" parent="Drawer3" unique_id=637386052]
+transform = Transform3D(0.867675, 0, 0, 0, 0.21126904, 0, 0, 0, 0.013487401, -0.008324683, 0.09678891, -0.38860655)
+material_override = SubResource("StandardMaterial3D_mr8lh")
+mesh = SubResource("4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Drawer3/Back" unique_id=1380893461]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer3/Back/StaticBody3D" unique_id=1435528350]
+shape = SubResource("BoxShape3D_mr8lh")
+
+[node name="Front" type="MeshInstance3D" parent="Drawer3" unique_id=1322231878]
+transform = Transform3D(0.867675, 0, 0, 0, 0.21126904, 0, 0, 0, 0.013487401, -0.008324683, 0.09678891, 0.3170209)
+material_override = SubResource("StandardMaterial3D_mr8lh")
+mesh = SubResource("4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Drawer3/Front" unique_id=1712668991]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer3/Front/StaticBody3D" unique_id=2030947803]
+shape = SubResource("BoxShape3D_mr8lh")
+
+[node name="Area3D" type="Area3D" parent="Drawer3/Front" unique_id=2033360813]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer3/Front/Area3D" unique_id=477729598]
+shape = SubResource("BoxShape3D_2xqx0")
+
+[node name="Left" type="MeshInstance3D" parent="Drawer3" unique_id=813555095]
+transform = Transform3D(-3.79273e-08, 0, 0.0134874, 0, 0.21126902, 0, -0.71146405, 0, -4.8341403e-10, -0.4373055, 0.09678891, -0.03811741)
+material_override = SubResource("StandardMaterial3D_mr8lh")
+mesh = SubResource("4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Drawer3/Left" unique_id=1545419161]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer3/Left/StaticBody3D" unique_id=37472151]
+shape = SubResource("BoxShape3D_mr8lh")
+
+[node name="Right" type="MeshInstance3D" parent="Drawer3" unique_id=385831812]
+transform = Transform3D(-3.79273e-08, 0, 0.0134874, 0, 0.21126904, 0, -0.7114641, 0, -4.834141e-10, 0.4187188, 0.09678891, -0.03811741)
+material_override = SubResource("StandardMaterial3D_mr8lh")
+mesh = SubResource("4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Drawer3/Right" unique_id=405533719]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer3/Right/StaticBody3D" unique_id=117682351]
+shape = SubResource("BoxShape3D_mr8lh")
+
+[node name="Button" type="MeshInstance3D" parent="Drawer3" unique_id=556618802]
+transform = Transform3D(0.17244498, 0, 0, 0, 0.08907441, 0, 0, 0, 0.069771, 0.016022742, 0.080702305, 0.33033466)
+material_override = SubResource("StandardMaterial3D_2xqx0")
+mesh = SubResource("11")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Drawer3/Button" unique_id=1118760491]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer3/Button/StaticBody3D" unique_id=1934205272]
+shape = SubResource("SphereShape3D_0iyc5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Drawer3" unique_id=1031728457]
+libraries/ = SubResource("AnimationLibrary_m7gnf")

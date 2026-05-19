@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://btbgsmxiyg5g"]
+
+[ext_resource type="ArrayMesh" uid="uid://0p8wvr44qwb1" path="res://MansionThingsGodot/Door requirements/key.obj" id="1_6n1hc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_csup6"]
+albedo_color = Color(0.41552365, 1.92523e-07, 0.058220536, 1)
+
+[node name="Key" type="MeshInstance3D" unique_id=93444174]
+transform = Transform3D(0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_csup6")
+mesh = ExtResource("1_6n1hc")

@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bepmmhhwy1fd"]
+
+[ext_resource type="Texture2D" uid="uid://r2i67ludici8" path="res://MansionThingsGodot/Door requirements/hammer.png" id="2_46gwh"]
+[ext_resource type="ArrayMesh" uid="uid://cixalyiifadi" path="res://MansionThingsGodot/Door requirements/Hammer.obj" id="2_peexl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_46gwh"]
+albedo_texture = ExtResource("2_46gwh")
+
+[node name="hammer" type="MeshInstance3D" unique_id=1049499209]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_46gwh")
+mesh = ExtResource("2_peexl")
